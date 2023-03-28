@@ -12,7 +12,7 @@ using WordsAPI.Repository;
 namespace WordsAPI.Repository.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230110035950_initial")]
+    [Migration("20230129162228_initial")]
     partial class initial
     {
         /// <inheritdoc />
@@ -20,12 +20,57 @@ namespace WordsAPI.Repository.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.1")
+                .HasAnnotation("ProductVersion", "7.0.2")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("WordsAPI.Core.Category", b =>
+            modelBuilder.Entity("CategoryEnglish", b =>
+                {
+                    b.Property<int>("CategoriesId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("EnglishesId")
+                        .HasColumnType("int");
+
+                    b.HasKey("CategoriesId", "EnglishesId");
+
+                    b.HasIndex("EnglishesId");
+
+                    b.ToTable("CategoryEnglish");
+                });
+
+            modelBuilder.Entity("CategoryTurkish", b =>
+                {
+                    b.Property<int>("CategoriesId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TurkishesId")
+                        .HasColumnType("int");
+
+                    b.HasKey("CategoriesId", "TurkishesId");
+
+                    b.HasIndex("TurkishesId");
+
+                    b.ToTable("CategoryTurkish");
+                });
+
+            modelBuilder.Entity("EnglishTurkish", b =>
+                {
+                    b.Property<int>("TranslationsId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TranslationsId1")
+                        .HasColumnType("int");
+
+                    b.HasKey("TranslationsId", "TranslationsId1");
+
+                    b.HasIndex("TranslationsId1");
+
+                    b.ToTable("EnglishTurkish");
+                });
+
+            modelBuilder.Entity("WordsAPI.Core.Models.Category", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -37,26 +82,27 @@ namespace WordsAPI.Repository.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("UpdatedDate")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Name")
+                        .IsUnique()
+                        .HasFilter("[Name] IS NOT NULL");
 
                     b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("WordsAPI.Core.English", b =>
+            modelBuilder.Entity("WordsAPI.Core.Models.English", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int?>("CategoryId")
-                        .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
@@ -78,21 +124,16 @@ namespace WordsAPI.Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CategoryId");
-
-                    b.ToTable("Englishes");
+                    b.ToTable("Englishes", (string)null);
                 });
 
-            modelBuilder.Entity("WordsAPI.Core.Turkish", b =>
+            modelBuilder.Entity("WordsAPI.Core.Models.Turkish", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int?>("CategoryId")
-                        .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
@@ -114,12 +155,10 @@ namespace WordsAPI.Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CategoryId");
-
-                    b.ToTable("Turkishes");
+                    b.ToTable("Turkishes", (string)null);
                 });
 
-            modelBuilder.Entity("WordsAPI.Core.User", b =>
+            modelBuilder.Entity("WordsAPI.Core.Models.User", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -153,92 +192,49 @@ namespace WordsAPI.Repository.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("WordsAPI.Core.WordCategory", b =>
+            modelBuilder.Entity("CategoryEnglish", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("CategoryId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("EnglishId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("TurkishId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CategoryId");
-
-                    b.HasIndex("EnglishId");
-
-                    b.HasIndex("TurkishId");
-
-                    b.ToTable("WordCategory");
-                });
-
-            modelBuilder.Entity("WordsAPI.Core.English", b =>
-                {
-                    b.HasOne("WordsAPI.Core.Category", null)
-                        .WithMany("Englishes")
-                        .HasForeignKey("CategoryId");
-                });
-
-            modelBuilder.Entity("WordsAPI.Core.Turkish", b =>
-                {
-                    b.HasOne("WordsAPI.Core.Category", null)
-                        .WithMany("Turkishes")
-                        .HasForeignKey("CategoryId");
-                });
-
-            modelBuilder.Entity("WordsAPI.Core.WordCategory", b =>
-                {
-                    b.HasOne("WordsAPI.Core.Category", "Category")
-                        .WithMany("WordCategories")
-                        .HasForeignKey("CategoryId")
+                    b.HasOne("WordsAPI.Core.Models.Category", null)
+                        .WithMany()
+                        .HasForeignKey("CategoriesId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("WordsAPI.Core.English", "English")
-                        .WithMany("WordCategories")
-                        .HasForeignKey("EnglishId")
+                    b.HasOne("WordsAPI.Core.Models.English", null)
+                        .WithMany()
+                        .HasForeignKey("EnglishesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("CategoryTurkish", b =>
+                {
+                    b.HasOne("WordsAPI.Core.Models.Category", null)
+                        .WithMany()
+                        .HasForeignKey("CategoriesId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("WordsAPI.Core.Turkish", "Turkish")
-                        .WithMany("WordCategories")
-                        .HasForeignKey("TurkishId")
+                    b.HasOne("WordsAPI.Core.Models.Turkish", null)
+                        .WithMany()
+                        .HasForeignKey("TurkishesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("EnglishTurkish", b =>
+                {
+                    b.HasOne("WordsAPI.Core.Models.English", null)
+                        .WithMany()
+                        .HasForeignKey("TranslationsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Category");
-
-                    b.Navigation("English");
-
-                    b.Navigation("Turkish");
-                });
-
-            modelBuilder.Entity("WordsAPI.Core.Category", b =>
-                {
-                    b.Navigation("Englishes");
-
-                    b.Navigation("Turkishes");
-
-                    b.Navigation("WordCategories");
-                });
-
-            modelBuilder.Entity("WordsAPI.Core.English", b =>
-                {
-                    b.Navigation("WordCategories");
-                });
-
-            modelBuilder.Entity("WordsAPI.Core.Turkish", b =>
-                {
-                    b.Navigation("WordCategories");
+                    b.HasOne("WordsAPI.Core.Models.Turkish", null)
+                        .WithMany()
+                        .HasForeignKey("TranslationsId1")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

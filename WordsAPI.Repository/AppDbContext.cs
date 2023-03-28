@@ -16,13 +16,30 @@ namespace WordsAPI.Repository
         }
 
         public DbSet<Category> Categories { get; set; }
-        public DbSet<English> Englishes { get; set; }
-        public DbSet<Turkish> Turkishes { get; set; }
+        public DbSet<English> EnglishWords { get; set; }
+        public DbSet<Turkish> TurkishWords { get; set; }
         public DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-    
+           modelBuilder.Entity<English>()
+                    .HasMany<Turkish>(e => e.Translations)
+                    .WithMany(t => t.Translations)
+                    .UsingEntity(j => j.ToTable("EnglishTurkishTranslations"));
+
+           modelBuilder.Entity<English>()
+                    .HasIndex(e => e.NormalizedWord)
+                    .IsUnique();
+
+           modelBuilder.Entity<Turkish>()
+                    .HasIndex(e => e.NormalizedWord)
+                    .IsUnique();
+
+           modelBuilder.Entity<Category>()
+                    .HasIndex(c => c.Name)
+                    .IsUnique();
+
+            base.OnModelCreating(modelBuilder);
         }
     }
 }

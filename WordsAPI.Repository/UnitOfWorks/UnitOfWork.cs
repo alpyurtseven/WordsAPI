@@ -23,7 +23,15 @@ namespace WordsAPI.Repository.UnitOfWorks
 
         public async Task CommitAsync()
         {
-           await _context.SaveChangesAsync();
+            try
+            {
+                var a = await _context.SaveChangesAsync();
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+          
         }
     }
 }

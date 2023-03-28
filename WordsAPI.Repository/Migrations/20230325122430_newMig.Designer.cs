@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WordsAPI.Repository;
 
@@ -11,9 +12,11 @@ using WordsAPI.Repository;
 namespace WordsAPI.Repository.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230325122430_newMig")]
+    partial class newMig
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -105,7 +108,7 @@ namespace WordsAPI.Repository.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("NormalizedWord")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<byte>("Status")
                         .HasColumnType("tinyint");
@@ -117,10 +120,6 @@ namespace WordsAPI.Repository.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("NormalizedWord")
-                        .IsUnique()
-                        .HasFilter("[NormalizedWord] IS NOT NULL");
 
                     b.ToTable("Englishes");
                 });
@@ -137,7 +136,7 @@ namespace WordsAPI.Repository.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("NormalizedWord")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<byte>("Status")
                         .HasColumnType("tinyint");
@@ -149,10 +148,6 @@ namespace WordsAPI.Repository.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("NormalizedWord")
-                        .IsUnique()
-                        .HasFilter("[NormalizedWord] IS NOT NULL");
 
                     b.ToTable("Turkishes");
                 });

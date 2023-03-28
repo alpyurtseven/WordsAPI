@@ -3,8 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using WordsAPI.Core.Models;
 using WordsAPI.Core.Repositories;
 
 namespace WordsAPI.Repository.Repositories
@@ -58,6 +60,11 @@ namespace WordsAPI.Repository.Repositories
         public void Update(T entity)
         {
             _dbSet.Update(entity);
+        }
+
+        public void UpdateRange(List<T> entity)
+        {
+          _dbSet.UpdateRange(entity);
         }
 
         public IQueryable<T> Where(Expression<Func<T, bool>> expression)

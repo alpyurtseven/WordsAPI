@@ -24,8 +24,9 @@ namespace WordsAPI.Service.Services
         public async Task<T> AddAsync(T entity)
         {
             await _repository.AddAsync(entity);
-            await _unitOfWork.CommitAsync();
 
+            await _unitOfWork.CommitAsync();
+     
             return entity;
         }
 
@@ -67,6 +68,13 @@ namespace WordsAPI.Service.Services
         public async Task UpdateAsync(T entity)
         {
             _repository.Update(entity);
+            await _unitOfWork.CommitAsync();
+        }
+
+        public async Task UpdateRangeAsync(List<T> entity)
+        {
+            _repository.UpdateRange(entity);
+
             await _unitOfWork.CommitAsync();
         }
 
