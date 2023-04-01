@@ -12,8 +12,8 @@ using WordsAPI.Repository;
 namespace WordsAPI.Repository.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230129162228_initial")]
-    partial class initial
+    [Migration("20230401113030_category")]
+    partial class category
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -67,7 +67,7 @@ namespace WordsAPI.Repository.Migrations
 
                     b.HasIndex("TranslationsId1");
 
-                    b.ToTable("EnglishTurkish");
+                    b.ToTable("EnglishTurkishTranslations", (string)null);
                 });
 
             modelBuilder.Entity("WordsAPI.Core.Models.Category", b =>
@@ -108,12 +108,9 @@ namespace WordsAPI.Repository.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("NormalizedWord")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<byte>("Status")
-                        .HasColumnType("tinyint");
-
-                    b.Property<byte>("Type")
                         .HasColumnType("tinyint");
 
                     b.Property<DateTime>("UpdatedDate")
@@ -124,7 +121,11 @@ namespace WordsAPI.Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Englishes", (string)null);
+                    b.HasIndex("NormalizedWord")
+                        .IsUnique()
+                        .HasFilter("[NormalizedWord] IS NOT NULL");
+
+                    b.ToTable("Englishes");
                 });
 
             modelBuilder.Entity("WordsAPI.Core.Models.Turkish", b =>
@@ -139,12 +140,9 @@ namespace WordsAPI.Repository.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("NormalizedWord")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<byte>("Status")
-                        .HasColumnType("tinyint");
-
-                    b.Property<byte>("Type")
                         .HasColumnType("tinyint");
 
                     b.Property<DateTime>("UpdatedDate")
@@ -155,7 +153,11 @@ namespace WordsAPI.Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Turkishes", (string)null);
+                    b.HasIndex("NormalizedWord")
+                        .IsUnique()
+                        .HasFilter("[NormalizedWord] IS NOT NULL");
+
+                    b.ToTable("Turkishes");
                 });
 
             modelBuilder.Entity("WordsAPI.Core.Models.User", b =>

@@ -12,5 +12,6 @@ namespace WordsAPI.Core.DTOs
         public string Word { get; set; }
         public List<string> Translations { get; set; }
         public List<string> Categories { get; set; }
+        public byte Status { get; set; } = 1;
     }
 }

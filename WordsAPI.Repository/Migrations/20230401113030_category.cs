@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace WordsAPI.Repository.Migrations
 {
     /// <inheritdoc />
-    public partial class initial : Migration
+    public partial class category : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -35,8 +35,7 @@ namespace WordsAPI.Repository.Migrations
                     CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Word = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    NormalizedWord = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Type = table.Column<byte>(type: "tinyint", nullable: false),
+                    NormalizedWord = table.Column<string>(type: "nvarchar(450)", nullable: true),
                     Status = table.Column<byte>(type: "tinyint", nullable: false)
                 },
                 constraints: table =>
@@ -53,8 +52,7 @@ namespace WordsAPI.Repository.Migrations
                     CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Word = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    NormalizedWord = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Type = table.Column<byte>(type: "tinyint", nullable: false),
+                    NormalizedWord = table.Column<string>(type: "nvarchar(450)", nullable: true),
                     Status = table.Column<byte>(type: "tinyint", nullable: false)
                 },
                 constraints: table =>
@@ -130,7 +128,7 @@ namespace WordsAPI.Repository.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "EnglishTurkish",
+                name: "EnglishTurkishTranslations",
                 columns: table => new
                 {
                     TranslationsId = table.Column<int>(type: "int", nullable: false),
@@ -138,15 +136,15 @@ namespace WordsAPI.Repository.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_EnglishTurkish", x => new { x.TranslationsId, x.TranslationsId1 });
+                    table.PrimaryKey("PK_EnglishTurkishTranslations", x => new { x.TranslationsId, x.TranslationsId1 });
                     table.ForeignKey(
-                        name: "FK_EnglishTurkish_Englishes_TranslationsId",
+                        name: "FK_EnglishTurkishTranslations_Englishes_TranslationsId",
                         column: x => x.TranslationsId,
                         principalTable: "Englishes",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_EnglishTurkish_Turkishes_TranslationsId1",
+                        name: "FK_EnglishTurkishTranslations_Turkishes_TranslationsId1",
                         column: x => x.TranslationsId1,
                         principalTable: "Turkishes",
                         principalColumn: "Id",
@@ -171,9 +169,23 @@ namespace WordsAPI.Repository.Migrations
                 column: "TurkishesId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_EnglishTurkish_TranslationsId1",
-                table: "EnglishTurkish",
+                name: "IX_Englishes_NormalizedWord",
+                table: "Englishes",
+                column: "NormalizedWord",
+                unique: true,
+                filter: "[NormalizedWord] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_EnglishTurkishTranslations_TranslationsId1",
+                table: "EnglishTurkishTranslations",
                 column: "TranslationsId1");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Turkishes_NormalizedWord",
+                table: "Turkishes",
+                column: "NormalizedWord",
+                unique: true,
+                filter: "[NormalizedWord] IS NOT NULL");
         }
 
         /// <inheritdoc />
@@ -186,7 +198,7 @@ namespace WordsAPI.Repository.Migrations
                 name: "CategoryTurkish");
 
             migrationBuilder.DropTable(
-                name: "EnglishTurkish");
+                name: "EnglishTurkishTranslations");
 
             migrationBuilder.DropTable(
                 name: "Users");

@@ -25,11 +25,11 @@ namespace WordsAPI.Repository.Repositories
 
         public async Task<List<T>> GetWordsWithRelations()
         {
-            return await _dbSet.Include(z => z.Translations).Include(z => z.Categories).ToListAsync();
+            return await _dbSet.Include(z => z.Translations).Include(z => z.Categories).Where(z=>z.Status > 0).ToListAsync();
         }
         public async Task<T> GetWordWithRelations(int id)
         {
-            return await _dbSet.Where(z => z.Id == id).Include(z => z.Translations).Include(z => z.Categories).SingleOrDefaultAsync();
+            return await _dbSet.Where(z => z.Id == id).Include(z => z.Translations).Include(z => z.Categories).Where(z=>z.Status > 0).SingleOrDefaultAsync();
         }
     }
 }

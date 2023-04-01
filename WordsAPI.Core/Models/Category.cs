@@ -9,6 +9,7 @@ namespace WordsAPI.Core.Models
     public class Category : BaseEntity
     {
         public string? Name { get; set; }
+        public string? TurkishName { get; set; }
         public ICollection<English>? Englishes { get; set; }
         public ICollection<Turkish>? Turkishes { get; set; }
 

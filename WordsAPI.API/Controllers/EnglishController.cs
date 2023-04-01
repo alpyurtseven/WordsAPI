@@ -45,5 +45,11 @@ namespace WordsAPI.Controllers
         {
             return CreateActionResult(await _englishService.Save(word));
         }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            return CreateActionResult(await _englishService.Delete(id));
+        }
     }
 }
