@@ -18,6 +18,7 @@ namespace WordsAPI.Core.Models
         {
             return Translations.Cast<T>().ToList();
         }
+        public ICollection<UserWord> UserWords { get; set; }
 
         public override List<string> getTranslations()
         {

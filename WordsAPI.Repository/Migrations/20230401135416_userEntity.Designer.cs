@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WordsAPI.Repository;
 
@@ -11,9 +12,11 @@ using WordsAPI.Repository;
 namespace WordsAPI.Repository.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230401135416_userEntity")]
+    partial class userEntity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -174,7 +177,7 @@ namespace WordsAPI.Repository.Migrations
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<float>("ExperiencePoints")
+                    b.Property<float>("ExpExperiencePoints")
                         .HasColumnType("real");
 
                     b.Property<int>("Level")
@@ -221,38 +224,6 @@ namespace WordsAPI.Repository.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("WordsAPI.Core.Models.UserWord", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("CorrectAnswersCount")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("LastCorrectAnswerDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("WordId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("WrongAnswersCount")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("UserId");
-
-                    b.HasIndex("WordId");
-
-                    b.ToTable("UserWord");
-                });
-
             modelBuilder.Entity("CategoryEnglish", b =>
                 {
                     b.HasOne("WordsAPI.Core.Models.Category", null)
@@ -296,35 +267,6 @@ namespace WordsAPI.Repository.Migrations
                         .HasForeignKey("TranslationsId1")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("WordsAPI.Core.Models.UserWord", b =>
-                {
-                    b.HasOne("WordsAPI.Core.Models.User", "User")
-                        .WithMany("UserWords")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("WordsAPI.Core.Models.English", "Word")
-                        .WithMany("UserWords")
-                        .HasForeignKey("WordId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("User");
-
-                    b.Navigation("Word");
-                });
-
-            modelBuilder.Entity("WordsAPI.Core.Models.English", b =>
-                {
-                    b.Navigation("UserWords");
-                });
-
-            modelBuilder.Entity("WordsAPI.Core.Models.User", b =>
-                {
-                    b.Navigation("UserWords");
                 });
 #pragma warning restore 612, 618
         }
