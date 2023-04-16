@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
+using SharedLibrary.Dtos;
 using System;
 using System.Collections.Generic;
 using System.Linq;

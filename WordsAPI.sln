@@ -4,18 +4,28 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WordsAPI.Core", "WordsAPI.Core\WordsAPI.Core.csproj", "{CF7D1276-0DB6-4A0E-8988-D4853D5F3700}"
+	ProjectSection(ProjectDependencies) = postProject
+		{12E71088-01D7-4583-9655-0D8C8AAC56EF} = {12E71088-01D7-4583-9655-0D8C8AAC56EF}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WordsAPI.Repository", "WordsAPI.Repository\WordsAPI.Repository.csproj", "{689644A5-6EE3-401C-8DD9-9F3BCE8082DC}"
 	ProjectSection(ProjectDependencies) = postProject
+		{12E71088-01D7-4583-9655-0D8C8AAC56EF} = {12E71088-01D7-4583-9655-0D8C8AAC56EF}
 		{CF7D1276-0DB6-4A0E-8988-D4853D5F3700} = {CF7D1276-0DB6-4A0E-8988-D4853D5F3700}
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WordsAPI.Service", "WordsAPI.Service\WordsAPI.Service.csproj", "{0DB6EBAD-029C-4955-A0CA-71ADE14E4AAB}"
 	ProjectSection(ProjectDependencies) = postProject
+		{12E71088-01D7-4583-9655-0D8C8AAC56EF} = {12E71088-01D7-4583-9655-0D8C8AAC56EF}
 		{689644A5-6EE3-401C-8DD9-9F3BCE8082DC} = {689644A5-6EE3-401C-8DD9-9F3BCE8082DC}
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WordsAPI.API", "WordsAPI.API\WordsAPI.API.csproj", "{6AB78ECC-712D-46A7-9B0C-151009CB07F4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{12E71088-01D7-4583-9655-0D8C8AAC56EF} = {12E71088-01D7-4583-9655-0D8C8AAC56EF}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedLibrary", "SharedLibrary\SharedLibrary.csproj", "{12E71088-01D7-4583-9655-0D8C8AAC56EF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +49,10 @@ Global
 		{6AB78ECC-712D-46A7-9B0C-151009CB07F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6AB78ECC-712D-46A7-9B0C-151009CB07F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6AB78ECC-712D-46A7-9B0C-151009CB07F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12E71088-01D7-4583-9655-0D8C8AAC56EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12E71088-01D7-4583-9655-0D8C8AAC56EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12E71088-01D7-4583-9655-0D8C8AAC56EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12E71088-01D7-4583-9655-0D8C8AAC56EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

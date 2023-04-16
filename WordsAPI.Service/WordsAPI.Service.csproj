@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SharedLibrary\SharedLibrary.csproj" />
     <ProjectReference Include="..\WordsAPI.Repository\WordsAPI.Repository.csproj" />
   </ItemGroup>
 
