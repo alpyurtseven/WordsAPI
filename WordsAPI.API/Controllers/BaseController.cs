@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using SharedLibrary.Dtos;
 using WordsAPI.Core.DTOs;
 
 namespace WordsAPI.Controllers

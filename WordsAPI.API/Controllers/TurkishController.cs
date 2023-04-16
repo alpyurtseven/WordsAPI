@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WordsAPI.Controllers;
 using WordsAPI.Core.DTOs;
@@ -7,6 +8,7 @@ using WordsAPI.Core.Services;
 
 namespace WordsAPI.API.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class TurkishController : BaseController

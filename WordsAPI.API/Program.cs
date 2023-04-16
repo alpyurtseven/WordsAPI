@@ -1,5 +1,8 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using SharedLibrary.Configuration;
 using System.Reflection;
+using WordsAPI.Core.Configuration;
 using WordsAPI.Core.Models;
 using WordsAPI.Core.Repositories;
 using WordsAPI.Core.Services;
@@ -24,8 +27,13 @@ builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepositor
 builder.Services.AddScoped(typeof(IService<>), typeof(Service<>));
 builder.Services.AddScoped(typeof(IWordRepository<>), typeof(WordRepository<>));
 builder.Services.AddScoped(typeof(IWordService<>), typeof(WordService<>));
+builder.Services.AddScoped(typeof(IUserRepository), typeof(UserRepository));
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
+builder.Services.AddScoped<ITokenService, TokenService>();
 
-builder.Services.AddAutoMapper(typeof(MapProfile));
+string connectionString = builder.Configuration.GetConnectionString("SqlConnection");
+
 builder.Services.AddDbContext<AppDbContext>(z =>
 {
     z.UseSqlServer(builder.Configuration.GetConnectionString("SqlConnection"), options => {
@@ -33,6 +41,31 @@ builder.Services.AddDbContext<AppDbContext>(z =>
     });
 });
 
+builder.Services.Configure<CustomTokenOption>(builder.Configuration.GetSection("TokenOption"));
+builder.Services.Configure<List<Client>>(builder.Configuration.GetSection("Clients"));
+
+var tokenOptions = builder.Configuration.GetSection("TokenOption").Get<CustomTokenOption>();
+
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, opts =>
+{
+    opts.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters()
+    {
+        ValidIssuer = tokenOptions.Issuer,
+        ValidAudience = tokenOptions.Audience[0],
+        IssuerSigningKey = SignService.GetSymmetricSecurityKey(tokenOptions.SecurityKey),
+
+        ValidateIssuerSigningKey =true,
+        ValidateAudience = true,
+        ValidateIssuer= true,
+        ValidateLifetime=true,
+
+        ClockSkew = TimeSpan.Zero,
+    };
+});
 
 var app = builder.Build();
 
@@ -44,6 +77,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 
