@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace WordsAPI.Repository.Migrations
 {
     /// <inheritdoc />
-    public partial class category : Migration
+    public partial class userRefreshToken : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -18,6 +18,7 @@ namespace WordsAPI.Repository.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    TurkishName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
@@ -61,14 +62,40 @@ namespace WordsAPI.Repository.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "UserRefreshTokens",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    UserId = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Expiration = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    UpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_UserRefreshTokens", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Users",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    FullName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Mail = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Surname = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Username = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Password = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    NormalizedUsername = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    NormalizedEmail = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    NormalizedPassword = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ProfilePicture = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Level = table.Column<int>(type: "int", nullable: false),
+                    ExperiencePoints = table.Column<float>(type: "real", nullable: false),
+                    RequiredExcperincePoints = table.Column<float>(type: "real", nullable: false),
                     Type = table.Column<byte>(type: "tinyint", nullable: false),
                     Status = table.Column<byte>(type: "tinyint", nullable: false),
                     CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -151,6 +178,35 @@ namespace WordsAPI.Repository.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "UserWord",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    WordId = table.Column<int>(type: "int", nullable: false),
+                    LastCorrectAnswerDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    WrongAnswersCount = table.Column<int>(type: "int", nullable: false),
+                    CorrectAnswersCount = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_UserWord", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_UserWord_Englishes_WordId",
+                        column: x => x.WordId,
+                        principalTable: "Englishes",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_UserWord_Users_UserId",
+                        column: x => x.UserId,
+                        principalTable: "Users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_Categories_Name",
                 table: "Categories",
@@ -186,6 +242,16 @@ namespace WordsAPI.Repository.Migrations
                 column: "NormalizedWord",
                 unique: true,
                 filter: "[NormalizedWord] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_UserWord_UserId",
+                table: "UserWord",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_UserWord_WordId",
+                table: "UserWord",
+                column: "WordId");
         }
 
         /// <inheritdoc />
@@ -201,16 +267,22 @@ namespace WordsAPI.Repository.Migrations
                 name: "EnglishTurkishTranslations");
 
             migrationBuilder.DropTable(
-                name: "Users");
+                name: "UserRefreshTokens");
+
+            migrationBuilder.DropTable(
+                name: "UserWord");
 
             migrationBuilder.DropTable(
                 name: "Categories");
 
             migrationBuilder.DropTable(
+                name: "Turkishes");
+
+            migrationBuilder.DropTable(
                 name: "Englishes");
 
             migrationBuilder.DropTable(
-                name: "Turkishes");
+                name: "Users");
         }
     }
 }

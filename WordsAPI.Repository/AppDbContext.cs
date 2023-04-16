@@ -19,6 +19,7 @@ namespace WordsAPI.Repository
         public DbSet<English> EnglishWords { get; set; }
         public DbSet<Turkish> TurkishWords { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<UserRefreshToken> UserRefreshTokens { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
