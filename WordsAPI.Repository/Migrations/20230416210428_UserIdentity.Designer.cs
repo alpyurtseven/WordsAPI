@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WordsAPI.Repository;
 
@@ -11,9 +12,11 @@ using WordsAPI.Repository;
 namespace WordsAPI.Repository.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230416210428_UserIdentity")]
+    partial class UserIdentity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -280,7 +283,10 @@ namespace WordsAPI.Repository.Migrations
                     b.Property<DateTime>("LastCorrectAnswerDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("UserId")
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId1")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
@@ -292,7 +298,7 @@ namespace WordsAPI.Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("UserId1");
 
                     b.HasIndex("WordId");
 
@@ -347,8 +353,8 @@ namespace WordsAPI.Repository.Migrations
             modelBuilder.Entity("WordsAPI.Core.Models.UserWord", b =>
                 {
                     b.HasOne("WordsAPI.Core.Models.User", "User")
-                        .WithMany("UserWords")
-                        .HasForeignKey("UserId")
+                        .WithMany()
+                        .HasForeignKey("UserId1")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -364,11 +370,6 @@ namespace WordsAPI.Repository.Migrations
                 });
 
             modelBuilder.Entity("WordsAPI.Core.Models.English", b =>
-                {
-                    b.Navigation("UserWords");
-                });
-
-            modelBuilder.Entity("WordsAPI.Core.Models.User", b =>
                 {
                     b.Navigation("UserWords");
                 });

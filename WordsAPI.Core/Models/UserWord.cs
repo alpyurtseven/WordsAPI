@@ -9,7 +9,7 @@ namespace WordsAPI.Core.Models
     public class UserWord
     {
         public int Id { get; set; }
-        public int UserId { get; set; }
+        public string UserId { get; set; }
         public int WordId { get; set; }
         public DateTime LastCorrectAnswerDate { get; set; }
         public int WrongAnswersCount { get; set; }

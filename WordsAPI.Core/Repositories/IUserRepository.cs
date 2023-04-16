@@ -14,5 +14,6 @@ namespace WordsAPI.Core.Repositories
          Task<User> GetUserByEmailAsync(string email);
          Task<User> GetUserByUserNameAsync(string username);
          Task<bool> CheckPasswordAsync(User user, string password);
+         Task<bool> AddWordToUserVocabulary(User user, string word);
     }
 }

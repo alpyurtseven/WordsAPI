@@ -42,9 +42,9 @@ namespace WordsAPI.Service.Services
             var userList = new List<Claim> {
                 new Claim(ClaimTypes.NameIdentifier,user.Id.ToString()),
                 new Claim(Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Email, user.Email),
-                new Claim(ClaimTypes.Name,user.Username),
-                new Claim(ClaimTypes.Surname,user.Surname),
-                new Claim(ClaimTypes.UserData,user.Name),
+                new Claim(ClaimTypes.Name,user.UserName),
+                new Claim(ClaimTypes.Surname,user.LastName),
+                new Claim(ClaimTypes.UserData,user.FirstName),
                 new Claim(Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Jti,Guid.NewGuid().ToString())
             };
 
@@ -92,12 +92,11 @@ namespace WordsAPI.Service.Services
         public ClientTokenDTO CreateTokenByClient(Client client)
         {
             var accessTokenExpiration = DateTime.Now.AddMinutes(_tokenOption.AccessTokenExpiration);
-            var refreshTokenExpiration = DateTime.Now.AddMinutes(_tokenOption.RefreshTokenExpiration);
             var securityKey = SignService.GetSymmetricSecurityKey(_tokenOption.SecurityKey);
 
             SigningCredentials signingCredentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256Signature);
 
-            JwtSecurityToken jwtSecurityToken = new JwtSecurityToken(issuer: _tokenOption.Issuer, expires: accessTokenExpiration, notBefore: DateTime.Now, claims: GetClaimsByClient(client));
+            JwtSecurityToken jwtSecurityToken = new JwtSecurityToken( issuer: _tokenOption.Issuer, expires: accessTokenExpiration, notBefore: DateTime.Now, claims: GetClaimsByClient(client), signingCredentials :signingCredentials);
 
             var handler = new JwtSecurityTokenHandler();
             var token = handler.WriteToken(jwtSecurityToken);

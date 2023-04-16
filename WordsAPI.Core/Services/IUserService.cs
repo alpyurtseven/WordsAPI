@@ -14,5 +14,6 @@ namespace WordsAPI.Core.Services
         Task<CustomResponseDto<UserDTO>> CreateUserAsync(UserRegisterDTO user);
         Task<CustomResponseDto<UserDTO>> GetUserByUserNameAsync(string username);
         Task<CustomResponseDto<UserDTO>> GetUserByEmailAsync(UserLoginDTO user);
+        Task<CustomResponseDto<bool>> AddWordToUserVocabulary(string username, string word);
     }
 }
