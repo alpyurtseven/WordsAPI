@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using SharedLibrary.Configuration;
 using System.Reflection;
 using WordsAPI.Core.Configuration;
@@ -41,6 +43,10 @@ builder.Services.AddDbContext<AppDbContext>(z =>
     });
 });
 
+builder.Services.AddIdentity<User, IdentityRole>()
+      .AddEntityFrameworkStores<AppDbContext>()
+      .AddDefaultTokenProviders();
+
 builder.Services.Configure<CustomTokenOption>(builder.Configuration.GetSection("TokenOption"));
 builder.Services.Configure<List<Client>>(builder.Configuration.GetSection("Clients"));
 
@@ -58,12 +64,20 @@ builder.Services.AddAuthentication(options =>
         ValidAudience = tokenOptions.Audience[0],
         IssuerSigningKey = SignService.GetSymmetricSecurityKey(tokenOptions.SecurityKey),
 
-        ValidateIssuerSigningKey =true,
+        ValidateIssuerSigningKey = true,
         ValidateAudience = true,
-        ValidateIssuer= true,
-        ValidateLifetime=true,
+        ValidateIssuer = true,
+        ValidateLifetime = true,
 
         ClockSkew = TimeSpan.Zero,
+    };
+    opts.Events = new JwtBearerEvents
+    {
+        OnAuthenticationFailed = context =>
+        {
+            Console.WriteLine("Authentication failed: " + context.Exception.Message);
+            return Task.CompletedTask;
+        }
     };
 });
 

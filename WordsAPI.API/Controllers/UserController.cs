@@ -8,7 +8,7 @@ using WordsAPI.Core.Services;
 
 namespace WordsAPI.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class UserController : BaseController
     {
@@ -30,6 +30,13 @@ namespace WordsAPI.API.Controllers
         public async Task<IActionResult> GetUser()
         {
             return CreateActionResult(await _userService.GetUserByUserNameAsync(HttpContext.User.Identity.Name));
+        }
+
+        [Authorize]
+        [HttpPut]
+        public async Task<IActionResult> AddWordToUserVocabulary(string word)
+        {
+            return CreateActionResult(await _userService.AddWordToUserVocabulary(HttpContext.User.Identity.Name,word));
         }
     }
 }
