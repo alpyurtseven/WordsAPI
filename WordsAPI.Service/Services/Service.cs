@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.OData.Query;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using WordsAPI.Core.Models;
 using WordsAPI.Core.Repositories;
 using WordsAPI.Core.Services;
 using WordsAPI.Core.UnitOfWorks;
@@ -43,14 +45,14 @@ namespace WordsAPI.Service.Services
             return await _repository.AnyAsync(expression);
         }
 
-        public async Task<IQueryable<T>> GetAllAsync()
+        public async Task<IQueryable<T>> GetAllAsync(ODataQueryOptions<User> queryOptions)
         {
-            return  _repository.GetAll();
+            return  _repository.GetAll(queryOptions);
         }
 
-        public async Task<T> GetByIdAsync(int id)
+        public async Task<T> GetByIdAsync(int id, ODataQueryOptions<User> queryOptions)
         {
-            return await _repository.GetByIdAsync(id);
+            return await _repository.GetByIdAsync(id, queryOptions);
         }
 
         public async Task RemoveAsync(T entity)

@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.OData.Query;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,11 +23,13 @@ namespace WordsAPI.Repository.Repositories
             _dbSet = _context.Set<T>();
         }
 
-        public async Task<List<T>> GetWordsWithRelations()
+        public async Task<List<T>> GetWordsWithRelations(ODataQueryOptions<T> queryOptions)
         {
-            return await _dbSet.Include(z => z.Translations).Include(z => z.Categories).Where(z=>z.Status > 0).ToListAsync();
+            var query = queryOptions.ApplyTo(_dbSet.Include(z => z.Translations).Include(z => z.Categories).Where(z => z.Status > 0)) as IQueryable<T>;
+
+            return await query.ToListAsync();
         }
-        public async Task<T> GetWordWithRelations(int id)
+        public async Task<T> GetWordWithRelations(int id, ODataQueryOptions<T> queryOptions)
         {
             return await _dbSet.Where(z => z.Id == id).Include(z => z.Translations).Include(z => z.Categories).Where(z=>z.Status > 0).SingleOrDefaultAsync();
         }

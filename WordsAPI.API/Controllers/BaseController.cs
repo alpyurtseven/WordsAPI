@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SharedLibrary.Dtos;
+using SharedLibrary.Utililty;
 using WordsAPI.Core.DTOs;
 
 namespace WordsAPI.Controllers
@@ -12,6 +13,18 @@ namespace WordsAPI.Controllers
         [NonAction]
         public IActionResult CreateActionResult<T>(CustomResponseDto<T> responseDto)
         {
+
+
+            if (responseDto.Data is List<WordDTO> dataList && Request.QueryString.Value.IndexOf("rand=true") != -1)
+            {
+
+                var random = new Random();
+                var randomizedData = dataList.OrderBy(x => random.Next()).ToList();
+
+                responseDto.Data = (T)(object)randomizedData;
+            }
+
+
             if (responseDto.StatusCode == 204)
             {
                 return new ObjectResult(null)

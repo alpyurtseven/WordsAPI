@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.OData.Query;
 using Microsoft.EntityFrameworkCore;
 using SharedLibrary.Dtos;
+using SharedLibrary.Utililty;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,11 +32,11 @@ namespace WordsAPI.Service.Services
             _englishService= englishService;
         }
 
-        public async Task<CustomResponseDto<List<WordDTO>>> GetWordsWithRelations()
+        public async Task<CustomResponseDto<List<WordDTO>>> GetWordsWithRelations(ODataQueryOptions<T> queryOptions)
         {
             List<WordDTO> wordsDto = new List<WordDTO>();
 
-            var words = await _wordRepository.GetWordsWithRelations();
+            var words = await _wordRepository.GetWordsWithRelations(queryOptions);
 
             foreach (var item in words)
             {
@@ -45,9 +47,9 @@ namespace WordsAPI.Service.Services
             return CustomResponseDto<List<WordDTO>>.Success(200, wordsDto);
         }
 
-        public async Task<CustomResponseDto<WordDTO>> GetWordWithRelations(int id)
+        public async Task<CustomResponseDto<WordDTO>> GetWordWithRelations(int id, ODataQueryOptions<T> queryOptions)
         {
-            var word = await _wordRepository.GetWordWithRelations(id);
+            var word = await _wordRepository.GetWordWithRelations(id,queryOptions);
 
             return CustomResponseDto<WordDTO>.Success(200, new WordDTO() { Word = word.NormalizedWord, Translations = word.getTranslations(), Categories = word.getCategories() });
         }
@@ -60,9 +62,9 @@ namespace WordsAPI.Service.Services
             if (typeof(T) == typeof(English))
             {
                  var allEnglishWords = await _englishService.GetAllAsync();
-                 var matchedEnglishEntity = allEnglishWords.Where(w => w.NormalizedWord == word.Word.ToUpper()).FirstOrDefault();
+                 var matchedEnglishEntity = allEnglishWords.Where(w => w.NormalizedWord == Utility.NormalizeWord(word.Word)).FirstOrDefault();
                  var alreadyExistsEnglishWord = GetExistEntity<English>(allEnglishWords, word.Word);
-                 var newEnglish = new English() { Word = word.Word, NormalizedWord = word.Word.ToUpper(), Status = 1, CreatedDate = DateTime.Now, UpdatedDate = DateTime.Now, Categories = new List<Category>(), Translations = new List<Turkish>() };
+                 var newEnglish = new English() { Word = word.Word, NormalizedWord = Utility.NormalizeWord(word.Word), Status = 1, CreatedDate = DateTime.Now, UpdatedDate = DateTime.Now, Categories = new List<Category>(), Translations = new List<Turkish>() };
 
 
                 if (matchedEnglishEntity != null)
@@ -94,7 +96,7 @@ namespace WordsAPI.Service.Services
 
                 foreach (var translation in word.Translations)
                 {
-                    if (translations.TryGetValue(translation.ToUpper(), out var existingtranslation))
+                    if (translations.TryGetValue(Utility.NormalizeWord(translation), out var existingtranslation))
                     {
                         if (alreadyExistsEnglishWord != null && alreadyExistsEnglishWord.Translations != null)
                         {
@@ -152,9 +154,9 @@ namespace WordsAPI.Service.Services
             else
             {
                 var allTurkishWords = await _turkishService.GetAllAsync();
-                var matchedTurkishEntity = allTurkishWords.Where(w => w.NormalizedWord == word.Word.ToUpper()).FirstOrDefault();
+                var matchedTurkishEntity = allTurkishWords.Where(w => w.NormalizedWord == Utility.NormalizeWord(word.Word)).FirstOrDefault();
                 var alreadyExistsTurkishWord = GetExistEntity<Turkish>(allTurkishWords, word.Word);
-                var newTurkish = new Turkish() { Word = word.Word, NormalizedWord = word.Word.ToUpper(), Status = 1, CreatedDate = DateTime.Now, UpdatedDate = DateTime.Now, Categories = new List<Category>(), Translations = new List<English>() };
+                var newTurkish = new Turkish() { Word = word.Word, NormalizedWord = Utility.NormalizeWord(word.Word), Status = 1, CreatedDate = DateTime.Now, UpdatedDate = DateTime.Now, Categories = new List<Category>(), Translations = new List<English>() };
 
 
                 if (matchedTurkishEntity != null)
@@ -186,7 +188,7 @@ namespace WordsAPI.Service.Services
 
                 foreach (var translation in word.Translations)
                 {
-                    if (translations.TryGetValue(translation.ToUpper(), out var existingtranslation))
+                    if (translations.TryGetValue(Utility.NormalizeWord(translation), out var existingtranslation))
                     {
                         if (alreadyExistsTurkishWord != null && alreadyExistsTurkishWord.Translations != null)
                         {
@@ -268,22 +270,22 @@ namespace WordsAPI.Service.Services
         public async Task<Dictionary<string, IWord>> GetOrCreateTranslations(List<string> translations)
         {
             var allTranslations = await _turkishService.GetAllAsync();
-            var existingTranslations = allTranslations.Where(c => translations.Select(nc => nc).Contains(c.NormalizedWord)).ToDictionary(c => c.NormalizedWord, c => (IWord)c);
+            var existingTranslations = allTranslations.Where(c => translations.Select(nc => Utility.NormalizeWord(nc)).Contains(c.NormalizedWord)).ToDictionary(c => c.NormalizedWord, c => (IWord)c);
 
             foreach (var translation in translations)
             {
-                var matchedTranslation = allTranslations.SingleOrDefault(z => z.NormalizedWord == translation.ToUpper());
+                var matchedTranslation = allTranslations.SingleOrDefault(z => z.NormalizedWord == Utility.NormalizeWord(translation));
 
                 if (matchedTranslation == null)
                 {
                     if (typeof(T) == typeof(English))
                     {
-                        Turkish newTurkish = new Turkish() { Word = translation, NormalizedWord = translation.ToUpper(), Status = 1, CreatedDate = DateTime.Now, UpdatedDate = DateTime.Now, Categories = new List<Category>() };
+                        Turkish newTurkish = new Turkish() { Word = translation, NormalizedWord = Utility.NormalizeWord(translation), Status = 1, CreatedDate = DateTime.Now, UpdatedDate = DateTime.Now, Categories = new List<Category>() };
                         await _turkishService.AddAsync(newTurkish);
 
                         existingTranslations.Add(newTurkish.NormalizedWord, newTurkish);
                     } else {
-                        English newEnglish = new English() { Word = translation, NormalizedWord = translation.ToUpper(), Status = 1, CreatedDate = DateTime.Now, UpdatedDate = DateTime.Now , Categories = new List<Category>() };
+                        English newEnglish = new English() { Word = translation, NormalizedWord = Utility.NormalizeWord(translation), Status = 1, CreatedDate = DateTime.Now, UpdatedDate = DateTime.Now , Categories = new List<Category>() };
                         await _englishService.AddAsync(newEnglish);
 
                         existingTranslations.Add(newEnglish.NormalizedWord, newEnglish);
@@ -299,7 +301,7 @@ namespace WordsAPI.Service.Services
             if (typeof(T) == typeof(English))
             {
                 English alreadyExistsWord = words.OfType<English>().Include(c=>c.Categories).Include(c=>c.Translations)
-                    .FirstOrDefault(w => w.NormalizedWord == searchedWord.ToUpper());
+                    .FirstOrDefault(w => w.NormalizedWord == Utility.NormalizeWord(searchedWord));
 
 
                 return alreadyExistsWord as T;
@@ -307,7 +309,7 @@ namespace WordsAPI.Service.Services
             else if (typeof(T) == typeof(Turkish))
             {
                 Turkish alreadyExistsWord = words.OfType<Turkish>().Include(c => c.Categories).Include(c => c.Translations)
-                    .FirstOrDefault(w => w.NormalizedWord == searchedWord.ToUpper());
+                    .FirstOrDefault(w => w.NormalizedWord == Utility.NormalizeWord(searchedWord));
 
                 return alreadyExistsWord as T;
             }

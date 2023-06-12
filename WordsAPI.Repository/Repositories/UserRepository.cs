@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.OData.Query;
 using Microsoft.EntityFrameworkCore;
+using SharedLibrary.Utililty;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,7 +32,10 @@ namespace WordsAPI.Repository.Repositories
 
         public async Task<User> CreateUserAsync(UserRegisterDTO user)
         {
+            var passwordHasher = new PasswordHasher<IdentityUser>();
             var userEntity = new User() { Email = user.Email, FirstName = user.Name, NormalizedEmail = user.Email.ToUpper(), PasswordHash = user.Password.ToUpper(), NormalizedUserName = user.Username.ToUpper(), LastName = user.Surname,   UserName = user.Username };
+
+            userEntity.PasswordHash = passwordHasher.HashPassword(userEntity, user.Password);
 
             await _dbSet.AddAsync(userEntity);
             await _unitOfWork.CommitAsync();
@@ -38,12 +43,12 @@ namespace WordsAPI.Repository.Repositories
             return userEntity;
         }
 
-        public async Task<User> GetUserByEmailAsync(string email)
+        public async Task<User> GetUserByEmailAsync(string email, ODataQueryOptions<User> queryOptions)
         {
             return await _dbSet.Where(z => z.NormalizedEmail == email.ToUpper()).SingleOrDefaultAsync();
         }
 
-        public async Task<User> GetUserByUserNameAsync(string username)
+        public async Task<User> GetUserByUserNameAsync(string username, ODataQueryOptions<User> queryOptions)
         {
             return await _dbSet.Where(z => z.NormalizedUserName == username.ToUpper()).SingleOrDefaultAsync();
         }
@@ -51,20 +56,17 @@ namespace WordsAPI.Repository.Repositories
 
         public async Task<bool> CheckPasswordAsync(User user, string password)
         {
-            var userEntity = await _dbSet.Where(z => z.NormalizedEmail == user.NormalizedEmail && z.PasswordHash == password.ToUpper()).SingleOrDefaultAsync();
+            var passwordHasher = new PasswordHasher<IdentityUser>();
+       
+            var result = passwordHasher.VerifyHashedPassword(user, user.PasswordHash, password);
 
-            return userEntity != null;
+            return result == PasswordVerificationResult.Success;
         }
 
         public async Task<bool> AddWordToUserVocabulary(User user, string word)
         {
             var userEntity = await _dbSet.Where(z=>z.Id==user.Id).SingleOrDefaultAsync();
-            var wordEntity = await _englishRepository.Where(z => z.NormalizedWord == word.ToUpper()).SingleOrDefaultAsync();
-
-            if (userEntity == null)
-            {
-                return userEntity == null;
-            }
+            var wordEntity = await _englishRepository.Where(z => z.NormalizedWord == Utility.NormalizeWord(word)).SingleOrDefaultAsync();
 
             userEntity.UserWords.Add(new UserWord() { CorrectAnswersCount=1,LastCorrectAnswerDate=DateTime.Now,UserId=user.Id,WordId=wordEntity.Id,WrongAnswersCount=0});
 
@@ -74,5 +76,11 @@ namespace WordsAPI.Repository.Repositories
 
             return true;
         }
+
+        public IQueryable<User> GetAllUsers(ODataQueryOptions<User> queryOptions)
+        {
+            return queryOptions.ApplyTo(_dbSet.AsQueryable()) as IQueryable<User>;
+        }
+
     }
 }

@@ -15,6 +15,6 @@ namespace WordsAPI.Core.Models
         public ICollection<IWord> Translations;
         public abstract List<string> getTranslations();
         public abstract List<string> getCategories();
-
     }
+
 }

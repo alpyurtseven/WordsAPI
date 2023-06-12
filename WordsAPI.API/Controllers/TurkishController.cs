@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.OData.Query;
 using WordsAPI.Controllers;
 using WordsAPI.Core.DTOs;
 using WordsAPI.Core.Models;
@@ -23,15 +24,15 @@ namespace WordsAPI.API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> All()
+        public async Task<IActionResult> All(ODataQueryOptions<Turkish> queryOptions)
         {
-            return CreateActionResult(await _turkishService.GetWordsWithRelations());
+            return CreateActionResult(await _turkishService.GetWordsWithRelations(queryOptions));
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(int id)
+        public async Task<IActionResult> GetById(int id, ODataQueryOptions<Turkish> queryOptions)
         {
-            return CreateActionResult(await _turkishService.GetWordWithRelations(id));
+            return CreateActionResult(await _turkishService.GetWordWithRelations(id,queryOptions));
         }
 
         [HttpPost]

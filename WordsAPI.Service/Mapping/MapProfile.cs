@@ -13,9 +13,12 @@ namespace WordsAPI.Service.Mapping
     {
         public MapProfile()
         {
-            CreateMap<English, WordDTO>();
-            CreateMap<Turkish, WordDTO>();
+            CreateMap<English, WordDTO>().ReverseMap();
+            CreateMap<Turkish, WordDTO>().ReverseMap();
+            CreateMap<Turkish, string>()
+        .ConvertUsing(x => x.Word);
+            CreateMap<Category, string>()
+       .ConvertUsing(x => x.Name);
         }
-       
     }
 }

@@ -2,14 +2,19 @@
 using Azure;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.OData.Query;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using SharedLibrary.Utililty;
 using System.Linq;
 using WordsAPI.Core.DTOs;
 using WordsAPI.Core.Models;
 using WordsAPI.Core.Services;
+using Utility = SharedLibrary.Utililty.Utility;
 
 namespace WordsAPI.Controllers
 {
+
     [Route("api/[controller]")]
     [ApiController]
     public class EnglishController : BaseController
@@ -23,15 +28,19 @@ namespace WordsAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> All()
+        public async Task<IActionResult> All(ODataQueryOptions<English> queryOptions)
         {
-            return CreateActionResult(await _englishService.GetWordsWithRelations());      
+            var words = await _englishService.GetWordsWithRelations(queryOptions);
+
+            return CreateActionResult(words);      
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(int id)
+        [EnableQuery]
+        public async Task<IActionResult> GetById(int id, ODataQueryOptions<English> queryOptions)
         {
-            return CreateActionResult(await _englishService.GetWordWithRelations(id));
+           
+            return CreateActionResult(await _englishService.GetWordWithRelations(id,queryOptions));
         }
 
         [HttpPost]

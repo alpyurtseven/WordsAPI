@@ -1,7 +1,10 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.OData;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using Microsoft.OData.ModelBuilder;
+using Microsoft.AspNetCore.OData.Extensions;
 using SharedLibrary.Configuration;
 using System.Reflection;
 using WordsAPI.Core.Configuration;
@@ -14,12 +17,27 @@ using WordsAPI.Repository.Repositories;
 using WordsAPI.Repository.UnitOfWorks;
 using WordsAPI.Service.Mapping;
 using WordsAPI.Service.Services;
+using Microsoft.OData.Edm;
+
+static IEdmModel GetEdmModel()
+{
+    ODataConventionModelBuilder builder = new();
+    builder.EntitySet<English>("Englishes");
+    return builder.GetEdmModel();
+}
 
 var builder = WebApplication.CreateBuilder(args);
+var modelBuilder = new ODataConventionModelBuilder();
 
 // Add services to the container.
-
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddOData(
+    options => options.EnableQueryFeatures(null).AddRouteComponents(
+        routePrefix: "odata",
+        model: modelBuilder.GetEdmModel()));
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new() { Title = "ODataTutorial", Version = "v1" });
+});
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -33,6 +51,7 @@ builder.Services.AddScoped(typeof(IUserRepository), typeof(UserRepository));
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
 builder.Services.AddScoped<ITokenService, TokenService>();
+builder.Services.AddAutoMapper(typeof(MapProfile));
 
 string connectionString = builder.Configuration.GetConnectionString("SqlConnection");
 
@@ -75,7 +94,6 @@ builder.Services.AddAuthentication(options =>
     {
         OnAuthenticationFailed = context =>
         {
-            Console.WriteLine("Authentication failed: " + context.Exception.Message);
             return Task.CompletedTask;
         }
     };
@@ -94,8 +112,11 @@ app.UseHttpsRedirection();
 
 app.UseAuthentication();
 
+app.UseRouting();
+
 app.UseAuthorization();
 
-app.MapControllers();
+app.UseEndpoints(endpoints => endpoints.MapControllers());
 
 app.Run();
+
