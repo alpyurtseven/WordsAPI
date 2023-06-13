@@ -30,7 +30,7 @@ namespace WordsAPI.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> RevokeResfreshToken(RefreshTokentDTO token)
+        public async Task<IActionResult> RevokeRefreshToken(RefreshTokentDTO token)
         {
             return CreateActionResult(await _authenticationService.RevokeRefreshToken(token.Token));
         }
