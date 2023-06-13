@@ -82,5 +82,9 @@ namespace WordsAPI.Repository.Repositories
             return queryOptions.ApplyTo(_dbSet.AsQueryable()) as IQueryable<User>;
         }
 
+        public async Task<User> GetUserById(string id)
+        {
+          return await _dbSet.Where(z => z.Id == id).SingleOrDefaultAsync();
+        }
     }
 }

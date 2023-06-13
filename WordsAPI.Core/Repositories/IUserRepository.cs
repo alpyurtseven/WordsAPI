@@ -17,5 +17,6 @@ namespace WordsAPI.Core.Repositories
         Task<User> GetUserByUserNameAsync(string username, ODataQueryOptions<User> queryOptions = null);
          Task<bool> CheckPasswordAsync(User user, string password);
          Task<bool> AddWordToUserVocabulary(User user, string word);
+        Task<User> GetUserById(string id);
     }
 }

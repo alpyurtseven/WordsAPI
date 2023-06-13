@@ -58,5 +58,12 @@ namespace WordsAPI.Service.Services
 
             return CustomResponseDto<UserDTO>.Success(200, new UserDTO() { Email = userEntity.Email, Id = userEntity.Id, Name = userEntity.FirstName, Surname = userEntity.LastName, Username = userEntity.UserName });
         }
+
+        public async Task<CustomResponseDto<User>> GetUserById(string id)
+        {
+            var userEntity =await _userRepository.GetUserById(id);
+
+            return CustomResponseDto<User>.Success(200, userEntity);
+        }
     }
 }
