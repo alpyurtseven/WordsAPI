@@ -13,6 +13,7 @@ namespace WordsAPI.API.Controllers
    
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class TurkishController : BaseController
     {
         private readonly IWordService<Turkish> _turkishService;

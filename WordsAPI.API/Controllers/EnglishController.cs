@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Azure;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.OData.Query;
@@ -17,6 +18,7 @@ namespace WordsAPI.Controllers
 
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class EnglishController : BaseController
     {
         private readonly IWordService<English> _englishService;
