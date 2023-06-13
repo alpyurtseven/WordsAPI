@@ -71,7 +71,7 @@ namespace WordsAPI.Service.Services
         public async Task<CustomResponseDto<TokenDTO>> CreateTokenByRefreshToken(string refreshToken)
         {
             var existRefreshToken = await _userRefreshTokenRepository.Where(z => z.Code == refreshToken).SingleOrDefaultAsync();
-            var user = await _userRepository.GetByIdAsync(Int32.Parse(existRefreshToken.UserId));
+            var user = await _userRepository.GetUserById(existRefreshToken.UserId);
             var token = _tokenService.CreateToken(user);
 
             existRefreshToken.Code = token.RefreshToken;
