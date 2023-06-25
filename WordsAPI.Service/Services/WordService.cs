@@ -14,6 +14,8 @@ using WordsAPI.Core.Repositories;
 using WordsAPI.Core.Services;
 using WordsAPI.Core.UnitOfWorks;
 using WordsAPI.Repository.Repositories;
+using System.Diagnostics;
+
 
 namespace WordsAPI.Service.Services
 {
@@ -40,7 +42,7 @@ namespace WordsAPI.Service.Services
 
             foreach (var item in words)
             {
-                 wordsDto.Add(new WordDTO() { Id=item.Id, Word = item.NormalizedWord, Translations = item.getTranslations(), Categories = 
+                 wordsDto.Add(new WordDTO() { Id=item.Id, Word = item.Word, Translations = item.getTranslations(), Categories = 
                     item.getCategories() });
             }
 
@@ -51,7 +53,7 @@ namespace WordsAPI.Service.Services
         {
             var word = await _wordRepository.GetWordWithRelations(id,queryOptions);
 
-            return CustomResponseDto<WordDTO>.Success(200, new WordDTO() { Word = word.NormalizedWord, Translations = word.getTranslations(), Categories = word.getCategories() });
+            return CustomResponseDto<WordDTO>.Success(200, new WordDTO() { Word = word.Word, Translations = word.getTranslations(), Categories = word.getCategories() });
         }
 
         public async Task<CustomResponseDto<WordDTO>> Save(WordDTO word)
@@ -102,14 +104,14 @@ namespace WordsAPI.Service.Services
                         {
                             if (existingtranslation is Turkish turkishWord)
                             {
-                                var existTranslation = alreadyExistsEnglishWord.Translations.FirstOrDefault(c => c.Id == existingtranslation.Id);
+                                var existTranslation = alreadyExistsEnglishWord.Translations.SingleOrDefault(c => c.Id == existingtranslation.Id);
                                 if (existTranslation == null)
                                 {
                                     foreach (var category in word.Categories)
                                     {
                                         if (categories.TryGetValue(category, out var existingCategory))
                                         {
-                                            var existCategory = alreadyExistsEnglishWord.Categories.FirstOrDefault(c => c.Id == existingCategory.Id);
+                                            var existCategory = alreadyExistsEnglishWord.Categories.SingleOrDefault(c => c.Id == existingCategory.Id);
                                             if (existCategory == null)
                                             {
                                                 existingtranslation.Categories.Add(existingCategory);
@@ -123,19 +125,6 @@ namespace WordsAPI.Service.Services
                         }
                         else
                         {
-                            foreach (var category in word.Categories)
-                            {
-                                if (categories.TryGetValue(category, out var existingCategory))
-                                {
-                                    if (existingtranslation.Categories == null)
-                                    {
-                                        existingtranslation.Categories = new List<Category>();
-                                    }
-
-                                    existingtranslation.Categories.Add(existingCategory);
-                                }
-                            }
-
                             newEnglish.Translations.Add((Turkish)existingtranslation);
                         }
                     }
@@ -152,7 +141,6 @@ namespace WordsAPI.Service.Services
                 }
                 else
                 {
-
                     await _englishService.AddAsync(newEnglish);
                 }
             }
@@ -274,7 +262,6 @@ namespace WordsAPI.Service.Services
                     await _categoryService.AddAsync(newCategory);
                     existingCategories.Add(newCategory.Name, newCategory);
                 }
-
             }
 
             return existingCategories;
@@ -294,15 +281,19 @@ namespace WordsAPI.Service.Services
                     if (typeof(T) == typeof(English))
                     {
                         Turkish newTurkish = new Turkish() { Word = translation, NormalizedWord = Utility.NormalizeWord(translation), Status = 1, CreatedDate = DateTime.Now, UpdatedDate = DateTime.Now, Categories = new List<Category>() };
-                        await _turkishService.AddAsync(newTurkish);
 
-                        existingTranslations.Add(newTurkish.NormalizedWord, newTurkish);
+                        existingTranslations.Add(newTurkish.NormalizedWord, await _turkishService.AddAsync(newTurkish));
                     } else {
-                        English newEnglish = new English() { Word = translation, NormalizedWord = Utility.NormalizeWord(translation), Status = 1, CreatedDate = DateTime.Now, UpdatedDate = DateTime.Now , Categories = new List<Category>() };
-                        await _englishService.AddAsync(newEnglish);
+                        English newEnglish = new English() { Word = translation, NormalizedWord = Utility.NormalizeWord(translation), Status = 1, CreatedDate = DateTime.Now, UpdatedDate = DateTime.Now , Categories = new List<Category>() };              
 
-                        existingTranslations.Add(newEnglish.NormalizedWord, newEnglish);
+                        existingTranslations.Add(newEnglish.NormalizedWord, await _englishService.AddAsync(newEnglish));
                     }
+                }else{
+                    var tempTranslation = existingTranslations[Utility.NormalizeWord(translation)];
+                   
+                    var dbWord = _turkishService.Where(z=>z.NormalizedWord == translation).Include(z=> z.Categories).ToList();
+                    existingTranslations.Remove(Utility.NormalizeWord(translation));
+                    existingTranslations.Add(tempTranslation.NormalizedWord, tempTranslation);
                 }
             }
 
