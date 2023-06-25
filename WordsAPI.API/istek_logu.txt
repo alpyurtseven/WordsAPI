@@ -22,3 +22,1026 @@ Content-Type: application/json
 Content-Length: 175
 Postman-Token: 9aa06d14-4705-42c1-9d36-c7f5f3bcef9e
 ------------------------------
+Method: GET, Path: https://localhost:7174/
+Headers:
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en,en-US;q=0.9,fr;q=0.8,tr-TR;q=0.7,tr;q=0.6,zh-CN;q=0.5,zh;q=0.4,ru;q=0.3,ar;q=0.2,uk;q=0.1
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+sec-ch-ua: "Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+------------------------------
+Method: GET, Path: https://localhost:7174/api/english
+Headers:
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en,en-US;q=0.9,fr;q=0.8,tr-TR;q=0.7,tr;q=0.6,zh-CN;q=0.5,zh;q=0.4,ru;q=0.3,ar;q=0.2,uk;q=0.1
+Upgrade-Insecure-Requests: 1
+sec-ch-ua: "Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+------------------------------
+Method: POST, Path: https://localhost:7174/api/user/createuser
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 138
+Postman-Token: b113044d-4275-409f-9189-658eccda1466
+------------------------------
+Method: POST, Path: https://localhost:7174/api/user/createuser
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 138
+Postman-Token: 3af2a4e2-a714-48f8-b9c9-5f87d7af8fe0
+------------------------------
+Method: POST, Path: https://localhost:7174/api/user/createuser
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 138
+Postman-Token: a52271af-944f-4c1c-a951-be28b55a74b1
+------------------------------
+Method: POST, Path: https://localhost:7174/api/user/createuser
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 138
+Postman-Token: 42350959-68b2-4d1f-b7bb-8edd6c07d1f4
+------------------------------
+Method: POST, Path: https://localhost:7174/api/user/createuser
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 138
+Postman-Token: c4fe782f-c197-44e2-b609-cc5938af562e
+------------------------------
+Method: POST, Path: https://localhost:7174/api/user/createuser
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 138
+Postman-Token: 2ca6bda6-e30c-4c17-8422-f06391c8153e
+------------------------------
+Method: POST, Path: https://localhost:7174/api/user/createuser
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 138
+Postman-Token: cb80562e-b3ea-4cf2-8158-36279c34618d
+------------------------------
+Method: POST, Path: https://localhost:7174/api/user/createuser
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 138
+Postman-Token: f0699d0e-ee0a-430e-b3c4-e23d18342a4c
+------------------------------
+Method: POST, Path: https://localhost:7174/api/user/createuser
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 138
+Postman-Token: 89abd829-d52e-43b6-a8a5-fb641db1070c
+------------------------------
+Method: POST, Path: https://localhost:7174/api/user/createuser
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 138
+Postman-Token: abfbd19a-58e6-487f-9bc1-a515a46c50cd
+------------------------------
+Method: POST, Path: https://localhost:7174/api/auth/createtokenbyclient
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 47
+Postman-Token: ea250099-977c-4b8c-92b4-f18cd2ff0e20
+------------------------------
+Method: POST, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Content-Type: application/json
+Content-Length: 122
+Postman-Token: 12857b0c-62aa-4347-862d-aee8263f81d6
+------------------------------
+Method: GET, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Postman-Token: 32625be9-c043-4f25-a65a-59610e66f430
+------------------------------
+Method: POST, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Content-Type: application/json
+Content-Length: 120
+Postman-Token: c7811629-e9b2-4202-9dcb-0961c677a0ed
+------------------------------
+Method: POST, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Content-Type: application/json
+Content-Length: 120
+Postman-Token: f7d7f345-9e15-4722-999e-31a4b758c22b
+------------------------------
+Method: POST, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Content-Type: application/json
+Content-Length: 120
+Postman-Token: e12655ef-3e01-497e-bea2-6a435e68b738
+------------------------------
+Method: POST, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Content-Type: application/json
+Content-Length: 127
+Postman-Token: 5cc5c251-b592-4128-915f-9d3b691c2272
+------------------------------
+Method: POST, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Content-Type: application/json
+Content-Length: 120
+Postman-Token: 9d89eca0-9de3-40e1-b511-3ed79e079232
+------------------------------
+Method: GET, Path: https://localhost:7174/
+Headers:
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en,en-US;q=0.9,fr;q=0.8,tr-TR;q=0.7,tr;q=0.6,zh-CN;q=0.5,zh;q=0.4,ru;q=0.3,ar;q=0.2,uk;q=0.1
+Upgrade-Insecure-Requests: 1
+sec-ch-ua: "Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+------------------------------
+Method: POST, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Content-Type: application/json
+Content-Length: 120
+Postman-Token: 8505e44a-9ae5-4073-86b9-8cbe9c63e737
+------------------------------
+Method: POST, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Content-Type: application/json
+Content-Length: 120
+Postman-Token: c190a623-73ab-4dda-bc9d-118b33d13b92
+------------------------------
+Method: GET, Path: https://localhost:7174/
+Headers:
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en,en-US;q=0.9,fr;q=0.8,tr-TR;q=0.7,tr;q=0.6,zh-CN;q=0.5,zh;q=0.4,ru;q=0.3,ar;q=0.2,uk;q=0.1
+Upgrade-Insecure-Requests: 1
+sec-ch-ua: "Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+------------------------------
+Method: POST, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Content-Type: application/json
+Content-Length: 120
+Postman-Token: 9da4b406-b724-4993-b5a2-2536bd7b5b10
+------------------------------
+Method: POST, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Content-Type: application/json
+Content-Length: 120
+Postman-Token: 81f9a00b-0e59-44e6-ae4c-f92d4bad0740
+------------------------------
+Method: POST, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Content-Type: application/json
+Content-Length: 120
+Postman-Token: 0b98ea93-9cbe-4533-82b1-ad9502a6cff6
+------------------------------
+Method: POST, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Content-Type: application/json
+Content-Length: 120
+Postman-Token: 59c7fcb9-4850-4cf6-bf8a-218a8be61abf
+------------------------------
+Method: POST, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Content-Type: application/json
+Content-Length: 120
+Postman-Token: 5ba4dfbb-fab5-47d2-8520-d20aebfe2b61
+------------------------------
+Method: GET, Path: https://localhost:7174/
+Headers:
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en,en-US;q=0.9,fr;q=0.8,tr-TR;q=0.7,tr;q=0.6,zh-CN;q=0.5,zh;q=0.4,ru;q=0.3,ar;q=0.2,uk;q=0.1
+Upgrade-Insecure-Requests: 1
+sec-ch-ua: "Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+------------------------------
+Method: POST, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Content-Type: application/json
+Content-Length: 120
+Postman-Token: a97e3c18-03f0-44c1-a06d-6920656f3b84
+------------------------------
+Method: GET, Path: https://localhost:7174/
+Headers:
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en,en-US;q=0.9,fr;q=0.8,tr-TR;q=0.7,tr;q=0.6,zh-CN;q=0.5,zh;q=0.4,ru;q=0.3,ar;q=0.2,uk;q=0.1
+Upgrade-Insecure-Requests: 1
+sec-ch-ua: "Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+------------------------------
+Method: POST, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Content-Type: application/json
+Content-Length: 120
+Postman-Token: de2b803a-4f2f-4d95-9441-13b23776231b
+------------------------------
+Method: GET, Path: https://localhost:7174/
+Headers:
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en,en-US;q=0.9,fr;q=0.8,tr-TR;q=0.7,tr;q=0.6,zh-CN;q=0.5,zh;q=0.4,ru;q=0.3,ar;q=0.2,uk;q=0.1
+Upgrade-Insecure-Requests: 1
+sec-ch-ua: "Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+------------------------------
+Method: POST, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Content-Type: application/json
+Content-Length: 120
+Postman-Token: 29ae053c-a408-44a0-949d-efd1dd6e647e
+------------------------------
+Method: GET, Path: https://localhost:7174/
+Headers:
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en,en-US;q=0.9,fr;q=0.8,tr-TR;q=0.7,tr;q=0.6,zh-CN;q=0.5,zh;q=0.4,ru;q=0.3,ar;q=0.2,uk;q=0.1
+Upgrade-Insecure-Requests: 1
+sec-ch-ua: "Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+------------------------------
+Method: POST, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Content-Type: application/json
+Content-Length: 120
+Postman-Token: cc20695b-ee25-4225-8d35-6f238c3f315b
+------------------------------
+Method: GET, Path: https://localhost:7174/
+Headers:
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en,en-US;q=0.9,fr;q=0.8,tr-TR;q=0.7,tr;q=0.6,zh-CN;q=0.5,zh;q=0.4,ru;q=0.3,ar;q=0.2,uk;q=0.1
+Upgrade-Insecure-Requests: 1
+sec-ch-ua: "Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+------------------------------
+Method: POST, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Content-Type: application/json
+Content-Length: 120
+Postman-Token: 650bc65f-a613-46b1-80a7-63bd422fcf50
+------------------------------
+Method: POST, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Content-Type: application/json
+Content-Length: 120
+Postman-Token: d11ac014-cc7d-4220-a473-0680565ad406
+------------------------------
+Method: GET, Path: https://localhost:7174/
+Headers:
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en,en-US;q=0.9,fr;q=0.8,tr-TR;q=0.7,tr;q=0.6,zh-CN;q=0.5,zh;q=0.4,ru;q=0.3,ar;q=0.2,uk;q=0.1
+Upgrade-Insecure-Requests: 1
+sec-ch-ua: "Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+------------------------------
+Method: POST, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Content-Type: application/json
+Content-Length: 120
+Postman-Token: 1c20c759-de29-47f1-8ab8-78834750526c
+------------------------------
+Method: GET, Path: https://localhost:7174/
+Headers:
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en,en-US;q=0.9,fr;q=0.8,tr-TR;q=0.7,tr;q=0.6,zh-CN;q=0.5,zh;q=0.4,ru;q=0.3,ar;q=0.2,uk;q=0.1
+Upgrade-Insecure-Requests: 1
+sec-ch-ua: "Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+------------------------------
+Method: POST, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Content-Type: application/json
+Content-Length: 120
+Postman-Token: b87eb364-c6a3-4b97-b3b3-d3afe8b3fb1a
+------------------------------
+Method: GET, Path: https://localhost:7174/
+Headers:
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en,en-US;q=0.9,fr;q=0.8,tr-TR;q=0.7,tr;q=0.6,zh-CN;q=0.5,zh;q=0.4,ru;q=0.3,ar;q=0.2,uk;q=0.1
+Upgrade-Insecure-Requests: 1
+sec-ch-ua: "Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+------------------------------
+Method: POST, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Content-Type: application/json
+Content-Length: 120
+Postman-Token: 8c2bb132-b6c1-4567-808b-79a551732255
+------------------------------
+Method: GET, Path: https://localhost:7174/
+Headers:
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en,en-US;q=0.9,fr;q=0.8,tr-TR;q=0.7,tr;q=0.6,zh-CN;q=0.5,zh;q=0.4,ru;q=0.3,ar;q=0.2,uk;q=0.1
+Upgrade-Insecure-Requests: 1
+sec-ch-ua: "Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+------------------------------
+Method: POST, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Content-Type: application/json
+Content-Length: 120
+Postman-Token: 5711c8b6-0445-48a6-8546-2c6d94342671
+------------------------------
+Method: GET, Path: https://localhost:7174/
+Headers:
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en,en-US;q=0.9,fr;q=0.8,tr-TR;q=0.7,tr;q=0.6,zh-CN;q=0.5,zh;q=0.4,ru;q=0.3,ar;q=0.2,uk;q=0.1
+Upgrade-Insecure-Requests: 1
+sec-ch-ua: "Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+------------------------------
+Method: POST, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Content-Type: application/json
+Content-Length: 124
+Postman-Token: c70fd902-760f-4636-afea-d0d76428edef
+------------------------------
+Method: GET, Path: https://localhost:7174/
+Headers:
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en,en-US;q=0.9,fr;q=0.8,tr-TR;q=0.7,tr;q=0.6,zh-CN;q=0.5,zh;q=0.4,ru;q=0.3,ar;q=0.2,uk;q=0.1
+Upgrade-Insecure-Requests: 1
+sec-ch-ua: "Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+------------------------------
+Method: POST, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Content-Type: application/json
+Content-Length: 124
+Postman-Token: 8264905a-58a5-4ca6-b0c5-0224a4a5ebc8
+------------------------------
+Method: POST, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Content-Type: application/json
+Content-Length: 124
+Postman-Token: ff0c214a-e8b0-46bc-be34-c4499121a2a6
+------------------------------
+Method: GET, Path: https://localhost:7174/
+Headers:
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en,en-US;q=0.9,fr;q=0.8,tr-TR;q=0.7,tr;q=0.6,zh-CN;q=0.5,zh;q=0.4,ru;q=0.3,ar;q=0.2,uk;q=0.1
+Upgrade-Insecure-Requests: 1
+sec-ch-ua: "Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+------------------------------
+Method: POST, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Content-Type: application/json
+Content-Length: 124
+Postman-Token: 14fd9599-0800-41d9-8268-cd901363993a
+------------------------------
+Method: GET, Path: https://localhost:7174/
+Headers:
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en,en-US;q=0.9,fr;q=0.8,tr-TR;q=0.7,tr;q=0.6,zh-CN;q=0.5,zh;q=0.4,ru;q=0.3,ar;q=0.2,uk;q=0.1
+Upgrade-Insecure-Requests: 1
+sec-ch-ua: "Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+------------------------------
+Method: POST, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Content-Type: application/json
+Content-Length: 124
+Postman-Token: 9f44e850-14ec-4818-adb3-8feb313b14ba
+------------------------------
+Method: GET, Path: https://localhost:7174/
+Headers:
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en,en-US;q=0.9,fr;q=0.8,tr-TR;q=0.7,tr;q=0.6,zh-CN;q=0.5,zh;q=0.4,ru;q=0.3,ar;q=0.2,uk;q=0.1
+Upgrade-Insecure-Requests: 1
+sec-ch-ua: "Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+------------------------------
+Method: POST, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Content-Type: application/json
+Content-Length: 124
+Postman-Token: 044c1424-df66-40f5-93a1-382c6bfc655e
+------------------------------
+Method: GET, Path: https://localhost:7174/
+Headers:
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en,en-US;q=0.9,fr;q=0.8,tr-TR;q=0.7,tr;q=0.6,zh-CN;q=0.5,zh;q=0.4,ru;q=0.3,ar;q=0.2,uk;q=0.1
+Upgrade-Insecure-Requests: 1
+sec-ch-ua: "Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+------------------------------
+Method: POST, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Content-Type: application/json
+Content-Length: 124
+Postman-Token: 23c88fe5-1470-4a09-aeef-7a6ba1dbdff5
+------------------------------
+Method: GET, Path: https://localhost:7174/
+Headers:
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en,en-US;q=0.9,fr;q=0.8,tr-TR;q=0.7,tr;q=0.6,zh-CN;q=0.5,zh;q=0.4,ru;q=0.3,ar;q=0.2,uk;q=0.1
+Upgrade-Insecure-Requests: 1
+sec-ch-ua: "Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+------------------------------
+Method: POST, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Content-Type: application/json
+Content-Length: 124
+Postman-Token: bcf87b99-882c-444c-8538-b5f6afb615e9
+------------------------------
+Method: POST, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Content-Type: application/json
+Content-Length: 124
+Postman-Token: 481c98e4-d931-495d-8c21-05c15b1a7e52
+------------------------------
+Method: GET, Path: https://localhost:7174/
+Headers:
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en,en-US;q=0.9,fr;q=0.8,tr-TR;q=0.7,tr;q=0.6,zh-CN;q=0.5,zh;q=0.4,ru;q=0.3,ar;q=0.2,uk;q=0.1
+Upgrade-Insecure-Requests: 1
+sec-ch-ua: "Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+------------------------------
+Method: POST, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Content-Type: application/json
+Content-Length: 124
+Postman-Token: 5d1a5629-669b-46a3-aa61-fc3c7f346036
+------------------------------
+Method: GET, Path: https://localhost:7174/
+Headers:
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en,en-US;q=0.9,fr;q=0.8,tr-TR;q=0.7,tr;q=0.6,zh-CN;q=0.5,zh;q=0.4,ru;q=0.3,ar;q=0.2,uk;q=0.1
+Upgrade-Insecure-Requests: 1
+sec-ch-ua: "Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+------------------------------
+Method: POST, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Content-Type: application/json
+Content-Length: 124
+Postman-Token: 143567bb-18be-4dd9-9836-e361fc76c92e
+------------------------------
+Method: POST, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Content-Type: application/json
+Content-Length: 122
+Postman-Token: 4d6fa22a-874b-43a2-82b8-043ad67aed08
+------------------------------
+Method: GET, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Postman-Token: 3bce3c49-7a28-4fbe-a36b-4433e92d818c
+------------------------------
+Method: POST, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Content-Type: application/json
+Content-Length: 120
+Postman-Token: 1a282b53-94c4-4290-8382-4c64f8e7d473
+------------------------------
+Method: GET, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Postman-Token: 9bbe544d-bb91-4096-8fe6-802fb4d5df08
+------------------------------
+Method: GET, Path: https://localhost:7174/
+Headers:
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en,en-US;q=0.9,fr;q=0.8,tr-TR;q=0.7,tr;q=0.6,zh-CN;q=0.5,zh;q=0.4,ru;q=0.3,ar;q=0.2,uk;q=0.1
+Upgrade-Insecure-Requests: 1
+sec-ch-ua: "Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+------------------------------
+Method: POST, Path: https://localhost:7174/api/user/createuser
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 138
+Postman-Token: dcaee04a-bd14-4e98-9bbd-0d701054707d
+------------------------------
+Method: GET, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Postman-Token: e1fb6ae0-01f5-4373-a4b8-a8ab3dcd423a
+------------------------------
+Method: GET, Path: https://localhost:7174/
+Headers:
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en,en-US;q=0.9,fr;q=0.8,tr-TR;q=0.7,tr;q=0.6,zh-CN;q=0.5,zh;q=0.4,ru;q=0.3,ar;q=0.2,uk;q=0.1
+Upgrade-Insecure-Requests: 1
+sec-ch-ua: "Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+------------------------------
+Method: GET, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Postman-Token: 40be77e6-24f0-432c-a352-ad54af447c86
+------------------------------

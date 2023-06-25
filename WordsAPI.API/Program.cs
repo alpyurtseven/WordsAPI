@@ -118,7 +118,7 @@ app.UseHttpsRedirection();
 
 var logFilePath = Path.Combine(Environment.CurrentDirectory, "istek_logu.txt");
 
-// RequestLoggingMiddleware'i uygulayýn
+// RequestLoggingMiddleware'i uygulayï¿½n
 app.Use(async (context, next) =>
 {
     var middleware = new RequestLoggingMiddleware(next, logFilePath);
