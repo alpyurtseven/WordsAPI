@@ -1,0 +1,24 @@
+Method: POST, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiZjFiMzJhMy04ZGI1LTQxMmQtYjFlMy0xODBjYjY1MjQ0M2UiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3NDU3NjAzLCJleHAiOjE2ODc4MTc2MDMsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.Q4rNcP9hwOx593YSROl8wRqgW4gLOD855E-sq1pOhhc
+Content-Type: application/json
+Content-Length: 175
+Postman-Token: 3a48e7dd-6d8f-4113-bac3-ee6429ebe2a2
+------------------------------
+Method: POST, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiZjFiMzJhMy04ZGI1LTQxMmQtYjFlMy0xODBjYjY1MjQ0M2UiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3NDU3NjAzLCJleHAiOjE2ODc4MTc2MDMsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.Q4rNcP9hwOx593YSROl8wRqgW4gLOD855E-sq1pOhhc
+Content-Type: application/json
+Content-Length: 175
+Postman-Token: 9aa06d14-4705-42c1-9d36-c7f5f3bcef9e
+------------------------------

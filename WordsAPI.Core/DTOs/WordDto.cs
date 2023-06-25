@@ -9,6 +9,7 @@ namespace WordsAPI.Core.DTOs
 {
     public  class WordDTO
     {
+        public int Id { get; set; } = -1;
         public string Word { get; set; }
         public List<string> Translations { get; set; }
         public List<string> Categories { get; set; }

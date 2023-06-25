@@ -5,13 +5,15 @@ namespace SharedLibrary.Dtos
     public class CustomResponseDto<T>
     {
         public T Data { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public List<string> Errors { get; set; }
 
         [JsonIgnore]
         public int StatusCode { get; set; }
 
         public static CustomResponseDto<T> Success(int statusCode, T data) {
-            return new CustomResponseDto<T> { Data = data,StatusCode=statusCode };    
+            return new CustomResponseDto<T> { Data = data, StatusCode = statusCode };    
         }
         public static CustomResponseDto<T> Success(int statusCode)
         {

@@ -40,6 +40,14 @@ namespace WordsAPI.Repository
                     .HasIndex(c => c.Name)
                     .IsUnique();
 
+            modelBuilder.Entity<User>()
+                    .HasIndex(u => u.UserName)
+                    .IsUnique();
+
+            modelBuilder.Entity<User>()
+                    .HasIndex(u => u.Email)
+                    .IsUnique();
+
             base.OnModelCreating(modelBuilder);
         }
     }

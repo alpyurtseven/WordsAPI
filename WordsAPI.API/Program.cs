@@ -18,6 +18,7 @@ using WordsAPI.Repository.UnitOfWorks;
 using WordsAPI.Service.Mapping;
 using WordsAPI.Service.Services;
 using Microsoft.OData.Edm;
+using WordsAPI.API.Middlewares;
 
 static IEdmModel GetEdmModel()
 {
@@ -112,7 +113,17 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+
 app.UseHttpsRedirection();
+
+var logFilePath = Path.Combine(Environment.CurrentDirectory, "istek_logu.txt");
+
+// RequestLoggingMiddleware'i uygulayýn
+app.Use(async (context, next) =>
+{
+    var middleware = new RequestLoggingMiddleware(next, logFilePath);
+    await middleware.InvokeAsync(context);
+});
 
 app.UseAuthentication();
 

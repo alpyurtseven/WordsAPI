@@ -40,7 +40,7 @@ namespace WordsAPI.Service.Services
 
             foreach (var item in words)
             {
-                 wordsDto.Add(new WordDTO() { Word = item.NormalizedWord, Translations = item.getTranslations(), Categories = 
+                 wordsDto.Add(new WordDTO() { Id=item.Id, Word = item.NormalizedWord, Translations = item.getTranslations(), Categories = 
                     item.getCategories() });
             }
 
@@ -84,7 +84,7 @@ namespace WordsAPI.Service.Services
                             var existCategory = alreadyExistsEnglishWord.Categories.FirstOrDefault(c => c.Id == existingCategory.Id);
                             if (existCategory == null)
                             {
-                                newEnglish.Categories.Add(existingCategory);
+                                alreadyExistsEnglishWord.Categories.Add(existingCategory);
                             }
                         }
                         else
@@ -127,6 +127,11 @@ namespace WordsAPI.Service.Services
                             {
                                 if (categories.TryGetValue(category, out var existingCategory))
                                 {
+                                    if (existingtranslation.Categories == null)
+                                    {
+                                        existingtranslation.Categories = new List<Category>();
+                                    }
+
                                     existingtranslation.Categories.Add(existingCategory);
                                 }
                             }
@@ -176,7 +181,7 @@ namespace WordsAPI.Service.Services
                             var existCategory = alreadyExistsTurkishWord.Categories.FirstOrDefault(c => c.Id == existingCategory.Id);
                             if (existCategory == null)
                             {
-                                newTurkish.Categories.Add(existingCategory);
+                                alreadyExistsTurkishWord.Categories.Add(existingCategory);
                             }
                         }
                         else
@@ -253,7 +258,15 @@ namespace WordsAPI.Service.Services
 
             foreach (var category in categories)
             {
-                var matchedCategory = allCategories.SingleOrDefault(z => z.Name.ToUpper() == category.ToUpper());
+                string matchedCategory = null;
+
+                foreach (var item in allCategories.ToList())
+                {
+                    if (Utility.NormalizeWord(item.Name) == Utility.NormalizeWord(category))
+                    {
+                        matchedCategory = item.Name;
+                    }
+                }
 
                 if (matchedCategory == null)
                 {

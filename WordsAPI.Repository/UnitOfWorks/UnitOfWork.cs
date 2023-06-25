@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,8 +28,10 @@ namespace WordsAPI.Repository.UnitOfWorks
             try
             {
                 var a = await _context.SaveChangesAsync();
+                Debug.WriteLine(_context.ChangeTracker.DebugView.LongView);
+
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
             }
