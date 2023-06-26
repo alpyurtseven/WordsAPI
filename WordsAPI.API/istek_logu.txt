@@ -1045,3 +1045,13 @@ Accept-Encoding: gzip, deflate, br
 Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
 Postman-Token: 40be77e6-24f0-432c-a352-ad54af447c86
 ------------------------------
+Method: GET, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiIzZWQ4MTk5NC00YzkwLTRlNTItODRhNi1hYzlkYzg2MzA5NzAiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Nzc0NzMzLCJleHAiOjE2ODc4MTA3MzMsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.SPCtIkuxyReV7j8U8QIjnO0R02-HdFD--juzymhDWIQ
+Postman-Token: fd4f902e-f83d-421d-b0b5-7401af8ed811
+------------------------------

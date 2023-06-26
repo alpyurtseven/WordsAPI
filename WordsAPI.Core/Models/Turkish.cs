@@ -21,7 +21,7 @@ namespace WordsAPI.Core.Models
 
         public override List<string> getTranslations()
         {
-            return this.Translations.Where(z=>z.Status > 0).Select(p => p.NormalizedWord).ToList();
+            return this.Translations.Where(z=>z.Status > 0).Select(p => p.Word).ToList();
         }
 
         ICollection<T> IWord.Translations<T>()
