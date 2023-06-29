@@ -2,9 +2,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.OData;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 using Microsoft.OData.ModelBuilder;
-using Microsoft.AspNetCore.OData.Extensions;
 using SharedLibrary.Configuration;
 using System.Reflection;
 using WordsAPI.Core.Configuration;
@@ -52,6 +50,7 @@ builder.Services.AddScoped(typeof(IUserRepository), typeof(UserRepository));
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
 builder.Services.AddScoped<ITokenService, TokenService>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddAutoMapper(typeof(MapProfile));
 builder.Services.AddCors(p => p.AddPolicy("corsapp", builder =>
 {
