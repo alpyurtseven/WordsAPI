@@ -65,5 +65,13 @@ namespace WordsAPI.Service.Services
 
             return CustomResponseDto<User>.Success(200, userEntity);
         }
+
+        public async Task<CustomResponseDto<List<WordDTO>>> GetUserVocabulary(string username)
+        {
+            var userEntity = await _userRepository.GetUserByUserNameAsync(username);
+            var userVocabulary = await _userRepository.GetUserVocabulary(userEntity);
+
+            return CustomResponseDto<List<WordDTO>>.Success(200, userVocabulary);
+        }
     }
 }

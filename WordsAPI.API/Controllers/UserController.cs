@@ -38,5 +38,12 @@ namespace WordsAPI.API.Controllers
         {
             return CreateActionResult(await _userService.AddWordToUserVocabulary(HttpContext.User.Identity.Name,word));
         }
+
+        [Authorize]
+        [HttpGet]
+        public async Task<IActionResult> GetUserVocabulary()
+        {
+            return CreateActionResult(await _userService.GetUserVocabulary(HttpContext.User.Identity.Name));
+        }
     }
 }

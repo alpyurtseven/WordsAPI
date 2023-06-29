@@ -17,6 +17,7 @@ namespace WordsAPI.Core.Services
         Task<CustomResponseDto<UserDTO>> GetAllUsers(ODataQueryOptions<User> queryOptions);
         Task<CustomResponseDto<UserDTO>> GetUserByEmailAsync(UserLoginDTO user, ODataQueryOptions<User> queryOptions = null);
         Task<CustomResponseDto<bool>> AddWordToUserVocabulary(string username, string word);
+        Task<CustomResponseDto<List<WordDTO>>> GetUserVocabulary(string username);
         Task<CustomResponseDto<User>> GetUserById(string id);
     }
 }

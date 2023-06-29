@@ -2,16 +2,10 @@
 using Microsoft.AspNetCore.OData.Query;
 using Microsoft.EntityFrameworkCore;
 using SharedLibrary.Utililty;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using WordsAPI.Core.DTOs;
 using WordsAPI.Core.Models;
 using WordsAPI.Core.Repositories;
 using WordsAPI.Core.UnitOfWorks;
-using WordsAPI.Repository.UnitOfWorks;
 
 namespace WordsAPI.Repository.Repositories
 {
@@ -21,12 +15,14 @@ namespace WordsAPI.Repository.Repositories
         private readonly IUnitOfWork _unitOfWork;
         private readonly DbSet<User> _dbSet;
         private readonly IGenericRepository<English> _englishRepository;
+        private readonly IGenericRepository<UserWord> _userWordRepository;
 
-        public UserRepository(AppDbContext context, IUnitOfWork unitOfWork, IGenericRepository<English> englishRepository) : base(context)
+        public UserRepository(AppDbContext context, IUnitOfWork unitOfWork, IGenericRepository<English> englishRepository, IGenericRepository<UserWord> userWordRepository) : base(context)
         {
             _context = context;
             _unitOfWork= unitOfWork;
             _englishRepository= englishRepository;
+            _userWordRepository = userWordRepository;
             _dbSet = _context.Set<User>();
         }
 
@@ -60,7 +56,7 @@ namespace WordsAPI.Repository.Repositories
        
             var result = passwordHasher.VerifyHashedPassword(user, user.PasswordHash, password);
 
-            return result == PasswordVerificationResult.Success;
+            return result != PasswordVerificationResult.Failed;
         }
 
         public async Task<bool> AddWordToUserVocabulary(User user, string word)
@@ -85,6 +81,21 @@ namespace WordsAPI.Repository.Repositories
         public async Task<User> GetUserById(string id)
         {
           return await _dbSet.Where(z => z.Id == id).SingleOrDefaultAsync();
+        }
+
+        public async Task<List<WordDTO>> GetUserVocabulary(User user)
+        {
+            var userWords = _userWordRepository.Where(z => z.UserId == user.Id).ToList();
+            var words = new List<WordDTO>();
+
+            foreach (var item in userWords)
+            {
+                var word = _englishRepository.Where(z=>z.Id == item.WordId).Include(z=>z.Translations).SingleOrDefault();
+
+                words.Add(new WordDTO() { Id = word.Id, Status = word.Status, Categories = new List<string>(), Translations = word.Translations.Select(z=>z.Word).ToList(), Word = word.Word });
+            }
+
+            return words;
         }
     }
 }
