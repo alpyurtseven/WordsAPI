@@ -1,12 +1,15 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 using SharedLibrary.Dtos;
+using SharedLibrary.Utililty;
 using WordsAPI.Core.Configuration;
 using WordsAPI.Core.DTOs;
 using WordsAPI.Core.Models;
 using WordsAPI.Core.Repositories;
 using WordsAPI.Core.Services;
 using WordsAPI.Core.UnitOfWorks;
+using WordsAPI.SharedLibrary.Exceptions;
 
 namespace WordsAPI.Service.Services
 {
@@ -17,20 +20,22 @@ namespace WordsAPI.Service.Services
         private readonly IUserRepository _userRepository;
         private readonly IUnitOfWork _unitOfWork;
         private readonly IGenericRepository<UserRefreshToken> _userRefreshTokenRepository;
+        private readonly IConfiguration _configuration;
 
-        public AuthenticationService(IOptions<List<Client>> optionsClient, ITokenService tokenService, IUserRepository userRepository, IUnitOfWork unitOfWork, IGenericRepository<UserRefreshToken> userRefreshTokenRespository)
+        public AuthenticationService(IOptions<List<Client>> optionsClient, ITokenService tokenService, IUserRepository userRepository, IUnitOfWork unitOfWork, IGenericRepository<UserRefreshToken> userRefreshTokenRespository, IConfiguration configuration)
         {
             _clients = optionsClient.Value;
             _tokenService = tokenService;
             _userRepository = userRepository;
             _unitOfWork = unitOfWork;
             _userRefreshTokenRepository = userRefreshTokenRespository;
+            _configuration = configuration;
         }
 
 
         public async Task<CustomResponseDto<TokenDTO>> CreateTokenAsync(UserLoginDTO loginDTO)
         {
-            var user = await _userRepository.GetUserByEmailAsync(loginDTO.Email);
+            var user = Utility.isNull(await _userRepository.GetUserByEmailAsync(loginDTO.Email));
 
             if (await _userRepository.CheckPasswordAsync(user, loginDTO.Password))
             {
@@ -57,12 +62,14 @@ namespace WordsAPI.Service.Services
                 return CustomResponseDto<TokenDTO>.Success(200, token);
             }
 
-            return CustomResponseDto<TokenDTO>.Fail(404, "Please check your email or password");
+            throw new ClientSideException("Kullanıcı adı ya da şifre hatalı");
         }
 
         public CustomResponseDto<ClientTokenDTO> CreateTokenByClient(ClientLoginDTO clientLogin)
         {
-            var client = _clients.SingleOrDefault(z => z.Id == clientLogin.Id && z.Secret == clientLogin.Secret);
+            var client = Utility.isNull<Client>(_clients
+                .SingleOrDefault(z => z.Id == clientLogin.Id && z.Secret == clientLogin.Secret));
+
             var token = _tokenService.CreateTokenByClient(client);
 
             return CustomResponseDto<ClientTokenDTO>.Success(200, token);
@@ -70,7 +77,7 @@ namespace WordsAPI.Service.Services
 
         public async Task<CustomResponseDto<TokenDTO>> CreateTokenByRefreshToken(string refreshToken)
         {
-            var existRefreshToken = await _userRefreshTokenRepository.Where(z => z.Code == refreshToken).SingleOrDefaultAsync();
+            var existRefreshToken = Utility.isNull<UserRefreshToken>(await _userRefreshTokenRepository.Where(z => z.Code == refreshToken).SingleOrDefaultAsync());
             var user = await _userRepository.GetUserById(existRefreshToken.UserId);
             var token = _tokenService.CreateToken(user);
 
@@ -84,7 +91,7 @@ namespace WordsAPI.Service.Services
 
         public async Task<CustomResponseDto<TokenDTO>> RevokeRefreshToken(string refreshToken)
         {
-            var existRefreshToken = await _userRefreshTokenRepository.Where(z => z.Code == refreshToken).SingleOrDefaultAsync();
+            var existRefreshToken = Utility.isNull<UserRefreshToken>(await _userRefreshTokenRepository.Where(z => z.Code == refreshToken).SingleOrDefaultAsync());
 
             _userRefreshTokenRepository.Remove(existRefreshToken);
 

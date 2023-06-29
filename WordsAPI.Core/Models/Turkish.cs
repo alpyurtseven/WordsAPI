@@ -1,27 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WordsAPI.Core.Models
 {
     [Table("Turkishes")]
     public class Turkish : AWord, IWord
     {
-        public virtual ICollection<Category>? Categories { get; set; }
-        public new ICollection<English> Translations { get; set; }
-        = new List<English>();
+        public override ICollection<Category>? Categories { get; set; } = new List<Category>();
+        public new ICollection<English> Translations { get; set; } = new List<English>();
 
         public override List<string> getCategories()
         {
-            return this.Categories.Select(p => p.Name).ToList();
+            return Categories.Select(p => p.Name)
+                .ToList();
         }
 
         public override List<string> getTranslations()
         {
-            return this.Translations.Where(z=>z.Status > 0).Select(p => p.Word).ToList();
+            return Translations.Where(z => z.Status > 0)
+                .Select(p => p.Word)
+                .ToList();
         }
 
         ICollection<T> IWord.Translations<T>()

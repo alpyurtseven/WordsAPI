@@ -4,14 +4,28 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Configuration;
+using SharedLibrary.Exceptions;
+using WordsAPI.SharedLibrary.Exceptions;
 
 namespace SharedLibrary.Utililty
 {
     public static class Utility
     {
-        public static string NormalizeWord(string input)
+        private readonly static IConfiguration _configuration;
+
+        static Utility()
         {
-            string normalized = input.Normalize(NormalizationForm.FormD);
+            var configurationBuilder = new ConfigurationBuilder()
+               .SetBasePath(Directory.GetCurrentDirectory())
+               .AddJsonFile("appsettings.json");
+
+            _configuration = configurationBuilder.Build();
+        }
+
+        public static string NormalizeWord(string? input)
+        {
+            string normalized = (input ?? "").Normalize(NormalizationForm.FormD);
             normalized = new string(normalized
                 .Where(c => CharUnicodeInfo.GetUnicodeCategory(c) != UnicodeCategory.NonSpacingMark)
                 .ToArray());
@@ -33,6 +47,18 @@ namespace SharedLibrary.Utililty
                 list[k] = list[n];
                 list[n] = value;
             }
+        }
+
+        public static T isNull<T>(T property)
+        {
+            if (property == null)
+            {
+                var errorMessageSection = _configuration.GetSection("ErrorMessages").GetSection("NotFound");
+
+                throw new NotFoundException(errorMessageSection[typeof(T).Name] ?? "Veri bulunamadı");
+            }
+
+             return property;
         }
     }
 }

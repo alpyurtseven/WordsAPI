@@ -17,6 +17,10 @@ using WordsAPI.Service.Mapping;
 using WordsAPI.Service.Services;
 using Microsoft.OData.Edm;
 using WordsAPI.API.Middlewares;
+using FluentValidation.AspNetCore;
+using WordsAPI.Service.Validatons;
+using WordsAPI.API.Filters;
+using Microsoft.AspNetCore.Mvc;
 
 static IEdmModel GetEdmModel()
 {
@@ -29,10 +33,27 @@ var builder = WebApplication.CreateBuilder(args);
 var modelBuilder = new ODataConventionModelBuilder();
 
 // Add services to the container.
-builder.Services.AddControllers().AddOData(
-    options => options.EnableQueryFeatures(null).AddRouteComponents(
-        routePrefix: "odata",
-        model: modelBuilder.GetEdmModel()));
+builder.Services.AddControllers(options =>
+    {
+        options.Filters.Add(new ValidateFilterAttribute());
+    })
+    .AddOData(
+        options => options.EnableQueryFeatures(null).AddRouteComponents(
+            routePrefix: "odata",
+            model: modelBuilder.GetEdmModel()))
+    .AddFluentValidation(validations =>
+        {
+            validations.RegisterValidatorsFromAssemblyContaining<ClientLoginDtoValidator>();
+            validations.RegisterValidatorsFromAssemblyContaining<LoginDtoValidator>();
+            validations.RegisterValidatorsFromAssemblyContaining<RefreshTokenDtoValidator>();
+            validations.RegisterValidatorsFromAssemblyContaining<RegisterDtoValidator>();
+            validations.RegisterValidatorsFromAssemblyContaining<WordDtoValidator>();
+        });
+
+builder.Services.Configure<ApiBehaviorOptions>(options =>
+{
+    options.SuppressModelStateInvalidFilter = true;
+});
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new() { Title = "ODataTutorial", Version = "v1" });
@@ -123,6 +144,8 @@ app.Use(async (context, next) =>
     var middleware = new RequestLoggingMiddleware(next, logFilePath);
     await middleware.InvokeAsync(context);
 });
+
+app.UseCustomException();
 
 app.UseAuthentication();
 

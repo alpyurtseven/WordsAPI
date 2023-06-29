@@ -21,7 +21,7 @@ namespace WordsAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> All()
+        public IActionResult All()
         {
            return CreateActionResult(_categoryService.GetAll());  
         }

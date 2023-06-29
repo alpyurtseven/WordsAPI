@@ -73,11 +73,6 @@ namespace WordsAPI.Repository.Repositories
             return true;
         }
 
-        public IQueryable<User> GetAllUsers(ODataQueryOptions<User> queryOptions)
-        {
-            return queryOptions.ApplyTo(_dbSet.AsQueryable()) as IQueryable<User>;
-        }
-
         public async Task<User> GetUserById(string id)
         {
           return await _dbSet.Where(z => z.Id == id).SingleOrDefaultAsync();

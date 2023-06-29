@@ -31,7 +31,7 @@ namespace WordsAPI.Repository.Repositories
         }
         public async Task<T> GetWordWithRelations(int id, ODataQueryOptions<T> queryOptions)
         {
-            return await _dbSet.Where(z => z.Id == id).Include(z => z.Translations).Include(z => z.Categories).Where(z=>z.Status > 0).SingleOrDefaultAsync();
+            return await _dbSet.Where(z => z.Id == id).Include(z => z.Translations).Include(z => z.Categories).Where(z => z.Status > 0).SingleOrDefaultAsync();
         }
     }
 }

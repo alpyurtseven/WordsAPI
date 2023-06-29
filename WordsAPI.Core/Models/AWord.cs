@@ -12,7 +12,7 @@ namespace WordsAPI.Core.Models
         public string? NormalizedWord { get; set; }
         public byte Status { get; set; }
         public virtual ICollection<Category>? Categories { get; set; }
-        public ICollection<IWord> Translations;
+        public ICollection<IWord>? Translations;
         public abstract List<string> getTranslations();
         public abstract List<string> getCategories();
     }

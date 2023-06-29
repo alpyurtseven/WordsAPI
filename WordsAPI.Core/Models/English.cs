@@ -10,7 +10,7 @@ namespace WordsAPI.Core.Models
     [Table("Englishes")]
     public class English : AWord, IWord
     {
-        public virtual ICollection<Category>? Categories { get; set; }
+        public override ICollection<Category>? Categories { get; set; } = new List<Category>();
         public new ICollection<Turkish> Translations { get; set; }
             = new List<Turkish>();
 
@@ -22,12 +22,14 @@ namespace WordsAPI.Core.Models
 
         public override List<string> getTranslations()
         {
-            return this.Translations.Where(z=>z.Status > 0).Select(p=>p.Word).ToList();
+            return Translations.Where(z=>z.Status > 0)
+                .Select(p=>p.Word)
+                .ToList();
         }
 
         public override List<string> getCategories()
         {
-            return this.Categories.Select(p => p.Name).ToList();
+            return Categories.Select(p => p.Name).ToList();
         }
     }
 }

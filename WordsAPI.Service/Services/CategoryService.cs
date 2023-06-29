@@ -24,7 +24,7 @@ namespace WordsAPI.Service.Services
 
 			foreach (var item in categories)
 			{
-				categoryDtos.Add(new CategoryDTO() { Id = item.Id, Name = item.Name });
+                categoryDtos.Add(new CategoryDTO() { Id = item.Id, Name = item.Name });
 			}
 
 			return CustomResponseDto<List<CategoryDTO>>.Success(200, categoryDtos);

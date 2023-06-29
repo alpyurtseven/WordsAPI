@@ -9,5 +9,11 @@ namespace SharedLibrary.Dtos
 
         [JsonIgnore]
         public int StatusCode { get; set; }
+
+        public NoContentCustomResponseDto(List<string> errors, int statusCode)
+        {
+            Errors = errors;
+            StatusCode = statusCode;
+        }
     }
 }

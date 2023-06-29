@@ -26,4 +26,10 @@
     <ProjectReference Include="..\WordsAPI.Service\WordsAPI.Service.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Filters\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Filters\" />
+  </ItemGroup>
 </Project>

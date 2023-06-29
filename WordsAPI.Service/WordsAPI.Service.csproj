@@ -9,6 +9,7 @@
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.OData" Version="8.2.0" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -16,4 +17,10 @@
     <ProjectReference Include="..\WordsAPI.Repository\WordsAPI.Repository.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Validatons\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Validatons\" />
+  </ItemGroup>
 </Project>

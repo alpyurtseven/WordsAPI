@@ -5123,3 +5123,812 @@ Content-Type: application/json
 Content-Length: 59
 Postman-Token: e2ca70f0-ae60-4485-8bec-b36455491198
 ------------------------------
+Method: POST, Path: https://localhost:7174/api/auth/createtokenbyclient
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 47
+Postman-Token: 5b193404-d17d-4f6e-bdb3-1cc8c49af0c8
+------------------------------
+Method: POST, Path: https://localhost:7174/api/auth/createtokenbyclient
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 47
+Postman-Token: e66e0fc3-819f-4638-b4dc-3381e55391eb
+------------------------------
+Method: POST, Path: https://localhost:7174/api/auth/createtokenbyclient
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 47
+Postman-Token: 35bcf2c9-6c8a-4a86-872d-38df686e0618
+------------------------------
+Method: POST, Path: https://localhost:7174/api/auth/createtokenbyclient
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 47
+Postman-Token: 71b4dd33-baf4-4502-bfeb-9f2a74f621f6
+------------------------------
+Method: POST, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Content-Type: application/json
+Content-Length: 105
+Postman-Token: 561e61e9-dec6-4eac-9334-5a5dcb9ec04f
+------------------------------
+Method: POST, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Content-Type: application/json
+Content-Length: 101
+Postman-Token: 64d56199-c906-4c49-826a-cac6e6fa3fec
+------------------------------
+Method: POST, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Content-Type: application/json
+Content-Length: 101
+Postman-Token: ea7736a7-236b-4374-9edf-779f0bcf764a
+------------------------------
+Method: POST, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Content-Type: application/json
+Content-Length: 101
+Postman-Token: 51bb0481-2e70-462d-9ec3-f833407516fd
+------------------------------
+Method: POST, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Content-Type: application/json
+Content-Length: 101
+Postman-Token: 7f82edb6-7f0b-4713-9559-87b7f1a04633
+------------------------------
+Method: POST, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Content-Type: application/json
+Content-Length: 101
+Postman-Token: 91b8ea64-1c88-45d1-a776-090f1d6e89a9
+------------------------------
+Method: POST, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Content-Type: application/json
+Content-Length: 62
+Postman-Token: f92839df-00d9-4a08-9500-ee527b315177
+------------------------------
+Method: POST, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Content-Type: application/json
+Content-Length: 62
+Postman-Token: 4fadf4ba-5c6f-4059-9890-e832781b55b0
+------------------------------
+Method: POST, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Content-Type: application/json
+Content-Length: 21
+Postman-Token: c4ce1ed7-c726-477c-9e04-fbfd2e282bff
+------------------------------
+Method: POST, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Content-Type: application/json
+Content-Length: 120
+Postman-Token: 8765d4bb-8520-467b-841d-17070e4410fd
+------------------------------
+Method: POST, Path: https://localhost:7174/api/user/createuser
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 115
+Postman-Token: c1073a0d-6e5a-4571-80eb-088d2f51e1d3
+------------------------------
+Method: POST, Path: https://localhost:7174/api/english
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Content-Type: application/json
+Content-Length: 105
+Postman-Token: 172948f7-e55a-42f4-900e-ab6d1f6245d5
+------------------------------
+Method: POST, Path: https://localhost:7174/api/user/createuser
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 116
+Postman-Token: a092d315-f89f-4932-b10c-170499fc6da5
+------------------------------
+Method: POST, Path: https://localhost:7174/api/user/createuser
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 103
+Postman-Token: bd21643f-b614-427e-862b-82173a4e0096
+------------------------------
+Method: POST, Path: https://localhost:7174/api/user/createuser
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 104
+Postman-Token: 1a872b65-803e-41e4-aa6a-17b55817faf6
+------------------------------
+Method: POST, Path: https://localhost:7174/api/user/createuser
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 103
+Postman-Token: 0e8171b9-fcb7-4e8a-956c-5afaed6af917
+------------------------------
+Method: POST, Path: https://localhost:7174/api/user/createuser
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 116
+Postman-Token: 8c203cc3-7631-44c7-9dfb-b6d072e5a723
+------------------------------
+Method: POST, Path: https://localhost:7174/api/auth/createtokenbyclient
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 73
+Postman-Token: 8fcff66b-8035-423d-84c3-91f6cb9b2446
+------------------------------
+Method: POST, Path: https://localhost:7174/api/auth/createtokenbyclient
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 73
+Postman-Token: 35593648-8216-428a-9ff5-4107d7b852e5
+------------------------------
+Method: POST, Path: https://localhost:7174/api/auth/createtokenbyclient
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 73
+Postman-Token: 2826e1b2-6b9c-4716-b6a5-331e03f42279
+------------------------------
+Method: POST, Path: https://localhost:7174/api/auth/createtokenbyclient
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 73
+Postman-Token: a1be6b26-0bd4-4710-880b-f34feae193a4
+------------------------------
+Method: POST, Path: https://localhost:7174/api/auth/createtokenbyclient
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 73
+Postman-Token: 5db26e20-303b-45d3-a1ac-dced34951fb5
+------------------------------
+Method: POST, Path: https://localhost:7174/api/auth/createtokenbyclient
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 73
+Postman-Token: bbac42da-cfa8-4ffe-9f9f-4e328df786ce
+------------------------------
+Method: POST, Path: https://localhost:7174/api/auth/createtokenbyrefreshtoken
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 54
+Postman-Token: 26a4cfc6-ce13-4219-934d-a4508a37dc76
+------------------------------
+Method: POST, Path: https://localhost:7174/api/auth/createtokenbyrefreshtoken
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 54
+Postman-Token: 81f8e000-ef7f-4366-bf8b-8e02793449c0
+------------------------------
+Method: POST, Path: https://localhost:7174/api/auth/createtokenbyrefreshtoken
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 54
+Postman-Token: 0aa9df05-d894-4d81-8713-b75a7206ff0a
+------------------------------
+Method: POST, Path: https://localhost:7174/api/auth/createtokenbyrefreshtoken
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 54
+Postman-Token: b9ecd814-1535-4811-8cb3-812d7f911b30
+------------------------------
+Method: POST, Path: https://localhost:7174/api/auth/createtokenbyrefreshtoken
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 54
+Postman-Token: 36f323d9-920a-48ab-bf31-8445c3946092
+------------------------------
+Method: POST, Path: https://localhost:7174/api/auth/createtokenbyrefreshtoken
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 54
+Postman-Token: 8f9e1e99-0032-4c5f-aec6-175167477615
+------------------------------
+Method: GET, Path: https://localhost:7174/api/english?$filter=categories/any(category:%20category/Name%20eq%20%27A1%27)
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Postman-Token: 51234b36-77df-476a-bcb6-c84c03de626a
+------------------------------
+Method: GET, Path: https://localhost:7174/api/english?$filter=categories/any(category:%20category/Name%20eq%20%27A1%27)
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Postman-Token: 584dc720-49a2-487f-b26f-33f15fc0bc91
+------------------------------
+Method: GET, Path: https://localhost:7174/api/english?$filter=categories/any(category:%20category/Name%20eq%20%27A1%27)
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Postman-Token: 5adf766d-9ad8-4216-9fdf-14cd9e94eebf
+------------------------------
+Method: GET, Path: https://localhost:7174/api/english?$filter=categories/any(category:%20category/Name%20eq%20%27A1%27)
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Postman-Token: 010c8168-489b-4f95-bf6c-a75bbd9e1874
+------------------------------
+Method: GET, Path: https://localhost:7174/api/english?$filter=categories/any(category:%20category/Name%20eq%20%27A1%27)
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Postman-Token: 63afce02-c4cc-41c7-81f8-2509cd69bc3c
+------------------------------
+Method: GET, Path: https://localhost:7174/api/english?$filter=categories/any(category:%20category/Name%20eq%20%27A1%27)
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Postman-Token: 0785a892-bd5c-4325-be93-27d80d955f2c
+------------------------------
+Method: GET, Path: https://localhost:7174/api/english?$filter=categories/any(category:%20category/Name%20eq%20%27A1%27)
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Postman-Token: e406ef85-3cf9-48c6-a6a0-977010f44b04
+------------------------------
+Method: POST, Path: https://localhost:7174/api/auth/createtoken
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 59
+Postman-Token: 93d10e6e-1cc1-4371-be1c-9560b824411a
+------------------------------
+Method: POST, Path: https://localhost:7174/api/auth/createtokenbyclient
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 73
+Postman-Token: 0c05e157-62ea-479c-84e8-c00ab8531ff8
+------------------------------
+Method: POST, Path: https://localhost:7174/api/auth/createtokenbyclient
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 73
+Postman-Token: c94d31f5-0bc4-4d0d-86d9-1d2bf3200bb7
+------------------------------
+Method: GET, Path: https://localhost:7174/api/user/getuservocabulary
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiI1N2NlYTc1Ni1mZDNlLTQ2YmYtYmU5Mi04NGIwZDFhYmI3N2IiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg4MDUxOTUxLCJleHAiOjE2ODg0MTE5NTEsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.AlVEE0xH2AI4FlEPTCQ5mYZwSXlC-NiLDCfbu7uOZHc
+Postman-Token: 958ee242-9c99-43d6-a63f-7bb56af0e79d
+------------------------------
+Method: GET, Path: https://localhost:7174/api/user/getuservocabulary
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiI1N2NlYTc1Ni1mZDNlLTQ2YmYtYmU5Mi04NGIwZDFhYmI3N2IiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg4MDUxOTUxLCJleHAiOjE2ODg0MTE5NTEsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.AlVEE0xH2AI4FlEPTCQ5mYZwSXlC-NiLDCfbu7uOZHc
+Postman-Token: 2914425e-6250-4bdc-8437-8caed058ec29
+------------------------------
+Method: POST, Path: https://localhost:7174/api/user/createuser
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 148
+Postman-Token: cf82d20f-49e9-465f-8a1e-f4d7c2b182e6
+------------------------------
+Method: POST, Path: https://localhost:7174/api/auth/createtoken
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 67
+Postman-Token: ce7b7eef-4a64-429a-a7ca-bff2a0343916
+------------------------------
+Method: GET, Path: https://localhost:7174/api/user/getuservocabulary
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6ImZmZWYxNmU0LWQwMzctNDg1ZC1hZjU2LTZkODQ1NjRkNTJhOSIsImVtYWlsIjoibmV3dXNlckBtZW1vcmVuZy5jb20iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoibmV3dXNlci5tZW1vcmVuZyIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL3N1cm5hbWUiOiJOZXdVc2VyIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy91c2VyZGF0YSI6Ik5ld1VzZXIiLCJqdGkiOiIwYzQ5MjI4MC05YmE3LTRmNGMtOWY1OS02YWFhZmM4MjgwY2QiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg4MDUyMDQ1LCJleHAiOjE2ODg0MTIwNDUsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.AMEWse72wyDaZqbsYtGNhmyFeCZapFrs_tspaUj0EsI
+Postman-Token: b41ced40-c77d-46a0-8ca5-d6d4d7e49c06
+------------------------------
+Method: GET, Path: https://localhost:7174/api/user/getuservocabulary
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiI1N2NlYTc1Ni1mZDNlLTQ2YmYtYmU5Mi04NGIwZDFhYmI3N2IiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg4MDUxOTUxLCJleHAiOjE2ODg0MTE5NTEsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.AlVEE0xH2AI4FlEPTCQ5mYZwSXlC-NiLDCfbu7uOZHc
+Postman-Token: 114f860a-e1d6-4fb7-aca2-aedce49cfabc
+------------------------------
+Method: GET, Path: https://localhost:7174/api/user/getuservocabulary
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiI1N2NlYTc1Ni1mZDNlLTQ2YmYtYmU5Mi04NGIwZDFhYmI3N2IiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg4MDUxOTUxLCJleHAiOjE2ODg0MTE5NTEsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.AlVEE0xH2AI4FlEPTCQ5mYZwSXlC-NiLDCfbu7uOZHc
+Postman-Token: 945979b9-2521-490f-8ade-744b31c606ec
+------------------------------
+Method: GET, Path: https://localhost:7174/api/user/getuservocabulary
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiI1N2NlYTc1Ni1mZDNlLTQ2YmYtYmU5Mi04NGIwZDFhYmI3N2IiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg4MDUxOTUxLCJleHAiOjE2ODg0MTE5NTEsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.AlVEE0xH2AI4FlEPTCQ5mYZwSXlC-NiLDCfbu7uOZHc
+Postman-Token: 73144a10-9d68-4eb2-b34e-05900f0f3d0c
+------------------------------
+Method: GET, Path: https://localhost:7174/api/english?$filter=categories/any(category:%20category/Name%20eq%20%27A1%27)
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Postman-Token: 6423356b-5cf2-4039-b074-f07932b83da2
+------------------------------
+Method: GET, Path: https://localhost:7174/api/english?$filter=categories/any(category:%20category/Name%20eq%20%27A1%27)
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Postman-Token: f11ec4b4-88e9-4ce9-94f4-6207b4c33d65
+------------------------------
+Method: GET, Path: https://localhost:7174/api/english?$filter=categories/any(category:%20category/Name%20eq%20%27A1%27)
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Authorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJTcGFBcHAiLCJqdGkiOiJiNTdhOWJlNS1iMDExLTRkMzctYTk0OS04MjJiOWU1MThkNjYiLCJhdWQiOiJ3d3cubWVtb3JlbmdhcGkuY29tIiwibmJmIjoxNjg3Njk0ODQ4LCJleHAiOjE2ODgwNTQ4NDgsImlzcyI6Ind3dy5tZW1vcmVuZ2FwaS5jb20ifQ.BnsWAARVrcRND3a6ig9rCHVLVtR5MxcS3lFxYcDy-KY
+Postman-Token: c18e48ad-d4d3-445f-9761-837f706c15f9
+------------------------------
+Method: POST, Path: https://localhost:7174/api/user/createuser
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 148
+Postman-Token: bbd6f715-3f63-4645-b4b2-192cbe2a13b7
+------------------------------
+Method: POST, Path: https://localhost:7174/api/user/createuser
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 148
+Postman-Token: a7a74712-99c6-4499-9875-4540b9fce7d2
+------------------------------
+Method: POST, Path: https://localhost:7174/api/user/createuser
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 148
+Postman-Token: 3fa7f8a7-f01b-418e-b887-41c5c025f6f3
+------------------------------
+Method: POST, Path: https://localhost:7174/api/user/createuser
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 148
+Postman-Token: 2ae5d837-cb6e-48e9-bf50-168312f456fe
+------------------------------
+Method: POST, Path: https://localhost:7174/api/user/createuser
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 148
+Postman-Token: f139ad35-aa78-471e-8cc3-2fd20f40b70b
+------------------------------
+Method: POST, Path: https://localhost:7174/api/user/createuser
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 148
+Postman-Token: 032fc551-2c93-484f-adbe-d181eddbe75a
+------------------------------
+Method: POST, Path: https://localhost:7174/api/user/createuser
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 148
+Postman-Token: 9e7fd225-1e6c-4e62-b21b-a64f0e19ca92
+------------------------------
+Method: POST, Path: https://localhost:7174/api/user/createuser
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 148
+Postman-Token: a0701521-9e2e-472c-9044-bdfdd3534455
+------------------------------
+Method: POST, Path: https://localhost:7174/api/user/createuser
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 149
+Postman-Token: 6297676e-a653-45db-a443-12f0ba2b4612
+------------------------------
+Method: POST, Path: https://localhost:7174/api/user/createuser
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 148
+Postman-Token: 62ce13d6-95c8-4f19-a8a2-4f84b9aad42e
+------------------------------
+Method: POST, Path: https://localhost:7174/api/user/createuser
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 150
+Postman-Token: ec2926cf-3fb8-46c4-b3fd-dc76613b38ea
+------------------------------
+Method: POST, Path: https://localhost:7174/api/user/createuser
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 149
+Postman-Token: 48633aed-a48d-4528-8651-3932594b2b7f
+------------------------------
+Method: POST, Path: https://localhost:7174/api/user/createuser
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 149
+Postman-Token: babd7730-0d7a-439a-8dff-465b663193b5
+------------------------------
+Method: POST, Path: https://localhost:7174/api/user/createuser
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 148
+Postman-Token: dc9763d8-225a-4ba1-bb3a-c48c60c6be2e
+------------------------------
+Method: POST, Path: https://localhost:7174/api/user/createuser
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 149
+Postman-Token: aa4252e3-94de-48f3-a48b-ca6c3f72081c
+------------------------------
+Method: POST, Path: https://localhost:7174/api/user/createuser
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 148
+Postman-Token: 09a650d9-fad0-43a4-a1cb-54c2f240b679
+------------------------------
+Method: POST, Path: https://localhost:7174/api/user/createuser
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 149
+Postman-Token: 49ac57ad-7344-47a1-a72e-d71e207ddbcc
+------------------------------
+Method: POST, Path: https://localhost:7174/api/user/createuser
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 148
+Postman-Token: 8d2eeb7a-638a-4cca-ab05-50f34a71a959
+------------------------------
+Method: POST, Path: https://localhost:7174/api/user/createuser
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 148
+Postman-Token: 5a8827eb-7d8c-4c9d-98dd-808329d520c6
+------------------------------
+Method: POST, Path: https://localhost:7174/api/auth/createtoken
+Headers:
+Accept: */*
+Connection: keep-alive
+Host: localhost:7174
+User-Agent: PostmanRuntime/7.32.3
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 67
+Postman-Token: f3e71a3f-02df-4056-9e7c-8faf95a68c59
+------------------------------
