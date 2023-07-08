@@ -44,7 +44,10 @@ namespace WordsAPI.Service.Services
 
                 if (userRefreshToken == null)
                 {
-                    await _userRefreshTokenRepository.AddAsync(new UserRefreshToken() { Code=token.RefreshToken,Expiration=token.RefreshTokenExpiration,UserId=user.Id.ToString()});
+                    await _userRefreshTokenRepository.AddAsync(new UserRefreshToken() {
+                        Code=token.RefreshToken,
+                        Expiration=token.RefreshTokenExpiration,
+                        UserId=user.Id.ToString()});
 
 
                     await _unitOfWork.CommitAsync();
@@ -83,6 +86,8 @@ namespace WordsAPI.Service.Services
 
             existRefreshToken.Code = token.RefreshToken;
             existRefreshToken.Expiration = token.RefreshTokenExpiration;
+
+            _userRefreshTokenRepository.Update(existRefreshToken);
 
             await _unitOfWork.CommitAsync();
 

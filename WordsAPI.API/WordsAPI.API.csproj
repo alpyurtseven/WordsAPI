@@ -17,6 +17,10 @@
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+    <PackageReference Include="Serilog.AspNetCore" Version="7.0.0" />
+    <PackageReference Include="Serilog.Formatting.Compact" Version="1.1.0" />
+    <PackageReference Include="Serilog.Enrichers.ClientInfo" Version="2.0.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -24,12 +28,19 @@
     <ProjectReference Include="..\WordsAPI.Core\WordsAPI.Core.csproj" />
     <ProjectReference Include="..\WordsAPI.Repository\WordsAPI.Repository.csproj" />
     <ProjectReference Include="..\WordsAPI.Service\WordsAPI.Service.csproj" />
+    <ProjectReference Include="..\WordsAPI.Caching\WordsAPI.Caching.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
   </ItemGroup>
 
   <ItemGroup>
     <None Remove="Filters\" />
+    <None Remove="Logging\" />
+    <None Remove="logs\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Filters\" />
+    <Folder Include="Logging\" />
+    <Folder Include="logs\" />
   </ItemGroup>
 </Project>

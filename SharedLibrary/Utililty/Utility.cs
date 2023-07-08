@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.Extensions.Configuration;
-using SharedLibrary.Exceptions;
-using WordsAPI.SharedLibrary.Exceptions;
+﻿    using System.Globalization;
+    using System.Text;
+    using Microsoft.Extensions.Configuration;
+    using SharedLibrary.Exceptions;
 
 namespace SharedLibrary.Utililty
 {
@@ -25,14 +20,19 @@ namespace SharedLibrary.Utililty
 
         public static string NormalizeWord(string? input)
         {
-            string normalized = (input ?? "").Normalize(NormalizationForm.FormD);
-            normalized = new string(normalized
-                .Where(c => CharUnicodeInfo.GetUnicodeCategory(c) != UnicodeCategory.NonSpacingMark)
-                .ToArray());
+            if (string.IsNullOrEmpty(input))
+                return input;
 
-            normalized = normalized.Normalize(NormalizationForm.FormKC);
+            string normalizedString = input.Normalize(NormalizationForm.FormD);
+            StringBuilder result = new StringBuilder();
 
-            return normalized.ToUpperInvariant();
+            foreach (char c in normalizedString)
+            {
+                if (CharUnicodeInfo.GetUnicodeCategory(c) != UnicodeCategory.NonSpacingMark)
+                    result.Append(c);
+            }
+
+            return result.ToString().ToLowerInvariant();
         }
 
         public static void Shuffle<T>(this IList<T> list)

@@ -1,12 +1,8 @@
-﻿using Microsoft.AspNetCore.OData.Query;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.OData.Query;
 using Microsoft.Extensions.Configuration;
 using SharedLibrary.Dtos;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
+using SharedLibrary.Utililty;
 using WordsAPI.Core.DTOs;
 using WordsAPI.Core.Models;
 using WordsAPI.Core.Repositories;
@@ -20,11 +16,13 @@ namespace WordsAPI.Service.Services
     {
         private readonly IUserRepository _userRepository;
         private readonly IConfiguration _configuration;
+        private readonly IUnitOfWork _unitOfWork;
 
         public UserService(IUserRepository repository, IUnitOfWork unitOfWork, IConfiguration configuration) : base(repository, unitOfWork)
         {
             _userRepository = repository;
             _configuration = configuration;
+            _unitOfWork = unitOfWork;
         }
 
         public async Task<CustomResponseDto<UserDTO>> CreateUserAsync(UserRegisterDTO user)
@@ -48,21 +46,51 @@ namespace WordsAPI.Service.Services
 
             var userEntity = await _userRepository.CreateUserAsync(user);
 
-            return CustomResponseDto<UserDTO>.Success(200, new UserDTO() { Email = userEntity.Email, Id = userEntity.Id, Name = userEntity.FirstName, Surname = userEntity.LastName, Username = userEntity.UserName });
+            return CustomResponseDto<UserDTO>.Success(200, new UserDTO() {
+                Email = userEntity.Email,
+                Id = userEntity.Id,
+                Name = userEntity.FirstName,
+                Surname = userEntity.LastName,
+                Username = userEntity.UserName,
+                Level = userEntity.Level,
+                ExperiencePoint = userEntity.ExperiencePoints,
+                RequiredExperiencePoint = userEntity.RequiredExperiencePoints,
+                ProfilePicture = userEntity.ProfilePicture
+            });
         }
 
         public async Task<CustomResponseDto<UserDTO>> GetUserByEmailAsync(UserLoginDTO user, ODataQueryOptions<User> queryOptions)
         {
             var userEntity = await _userRepository.GetUserByEmailAsync(user.Email ?? "", queryOptions);
 
-            return CustomResponseDto<UserDTO>.Success(200, new UserDTO() { Email = userEntity.Email, Id = userEntity.Id, Name = userEntity.FirstName, Surname = userEntity.LastName, Username = userEntity.UserName });
+            return CustomResponseDto<UserDTO>.Success(200, new UserDTO() {
+                Email = userEntity.Email,
+                Id = userEntity.Id,
+                Name = userEntity.FirstName,
+                Surname = userEntity.LastName,
+                Username = userEntity.UserName,
+                Level = userEntity.Level,
+                ExperiencePoint = userEntity.ExperiencePoints,
+                RequiredExperiencePoint = userEntity.RequiredExperiencePoints,
+                ProfilePicture = userEntity.ProfilePicture
+            });
         }
 
         public async Task<CustomResponseDto<UserDTO>> GetUserByUserNameAsync(string username, ODataQueryOptions<User> queryOptions)
         {
             var userEntity = await _userRepository.GetUserByUserNameAsync(username, queryOptions);
 
-            return CustomResponseDto<UserDTO>.Success(200, new UserDTO() { Email = userEntity.Email, Id = userEntity.Id, Name = userEntity.FirstName, Surname = userEntity.LastName, Username = userEntity.UserName });
+            return CustomResponseDto<UserDTO>.Success(200, new UserDTO() {
+                Email = userEntity.Email,
+                Id = userEntity.Id,
+                Name = userEntity.FirstName,
+                Surname = userEntity.LastName,
+                Username = userEntity.UserName,
+                Level = userEntity.Level,
+                ExperiencePoint = userEntity.ExperiencePoints,
+                RequiredExperiencePoint = userEntity.RequiredExperiencePoints,
+                ProfilePicture = userEntity.ProfilePicture
+            });;
         }
 
         public async Task<CustomResponseDto<bool>> AddWordToUserVocabulary(string username, string word)
@@ -95,6 +123,39 @@ namespace WordsAPI.Service.Services
             var userVocabulary = await _userRepository.GetUserVocabulary(userEntity);
 
             return CustomResponseDto<List<WordDTO>>.Success(200, userVocabulary);
+        }
+
+        public async Task<CustomResponseDto<UserDTO>> UpdateUser(string username, UserUpdateDTO user)
+        {
+            var hasUser = Utility.isNull<User>(await _userRepository.GetUserByUserNameAsync(username));
+            var passwordHasher = new PasswordHasher<IdentityUser>();
+        
+            hasUser.FirstName = user.Name;
+            hasUser.LastName = user.Surname;
+            hasUser.Email = user.Email;
+            hasUser.ProfilePicture = user.ProfilePicture;
+
+            if (user.Password != null)
+            {
+                hasUser.PasswordHash = passwordHasher.HashPassword(hasUser, user.Password);
+            }
+       
+            _userRepository.Update(hasUser);
+
+            _unitOfWork.Commit();
+
+            return CustomResponseDto<UserDTO>.Success(200, new UserDTO()
+            {
+                Email = user.Email,
+                ProfilePicture = user.ProfilePicture,
+                ExperiencePoint = hasUser.ExperiencePoints,
+                RequiredExperiencePoint=hasUser.RequiredExperiencePoints,
+                Name = user.Name,
+                Surname = user.Surname,
+                Id = hasUser.Id,
+                Level =hasUser.Level,
+                Username = hasUser.UserName
+            });
         }
     }
 }

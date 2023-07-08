@@ -10,7 +10,7 @@ namespace WordsAPI.Core.Models
     [Table("Englishes")]
     public class English : AWord, IWord
     {
-        public override ICollection<Category>? Categories { get; set; } = new List<Category>();
+        public override ICollection<Category> Categories { get; set; }
         public new ICollection<Turkish> Translations { get; set; }
             = new List<Turkish>();
 

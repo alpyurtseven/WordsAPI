@@ -13,5 +13,9 @@ namespace WordsAPI.Core.DTOs
         public string? Surname { get; set; }
         public string? Username { get; set; }
         public string? Email { get; set; }
+        public string? ProfilePicture { get; set; }
+        public int Level { get; set; }
+        public float ExperiencePoint { get; set; }
+        public float RequiredExperiencePoint { get; set; }
     }
 }

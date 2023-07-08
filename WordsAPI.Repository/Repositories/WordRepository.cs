@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,13 +26,23 @@ namespace WordsAPI.Repository.Repositories
 
         public async Task<List<T>> GetWordsWithRelations(ODataQueryOptions<T> queryOptions)
         {
-            var query = queryOptions.ApplyTo(_dbSet.Include(z => z.Translations).Include(z => z.Categories).Where(z => z.Status > 0)) as IQueryable<T>;
+            IQueryable<T> query;
 
-            return await query.ToListAsync();
+            if(queryOptions != null)
+            {
+                query = queryOptions.ApplyTo(_dbSet.Include(z => z.Translations).Include(z => z.Categories).AsSplitQuery().Where(z => z.Status > 0)) as IQueryable<T>;
+            }
+            else
+            {
+                query = _dbSet.Include(z => z.Translations).Include(z => z.Categories).AsSplitQuery().Where(z => z.Status > 0);
+            }
+          
+
+            return  query.ToList();
         }
         public async Task<T> GetWordWithRelations(int id, ODataQueryOptions<T> queryOptions)
         {
-            return await _dbSet.Where(z => z.Id == id).Include(z => z.Translations).Include(z => z.Categories).Where(z => z.Status > 0).SingleOrDefaultAsync();
+            return await _dbSet.Where(z => z.Id == id).Include(z => z.Translations).Include(z => z.Categories).AsSplitQuery().Where(z => z.Status > 0).SingleOrDefaultAsync();
         }
     }
 }

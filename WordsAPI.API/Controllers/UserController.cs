@@ -45,5 +45,12 @@ namespace WordsAPI.API.Controllers
         {
             return CreateActionResult(await _userService.GetUserVocabulary(HttpContext.User.Identity.Name));
         }
+
+        [Authorize]
+        [HttpPut]
+        public async Task<IActionResult> UpdateUser(UserUpdateDTO user)
+        {
+            return CreateActionResult(await _userService.UpdateUser(HttpContext.User.Identity.Name, user));
+        }
     }
 }

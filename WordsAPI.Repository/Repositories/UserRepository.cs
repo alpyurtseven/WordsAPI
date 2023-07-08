@@ -9,7 +9,8 @@ using WordsAPI.Core.UnitOfWorks;
 
 namespace WordsAPI.Repository.Repositories
 {
-    public class UserRepository : GenericRepository<User>, IUserRepository
+    public class UserRepository : GenericRepository<User>, IUserRepository //TODO Check user operations before publish
+        //TODO Remove exists user and words from database after publish
     {
         protected readonly AppDbContext _context;
         private readonly IUnitOfWork _unitOfWork;
@@ -29,7 +30,7 @@ namespace WordsAPI.Repository.Repositories
         public async Task<User> CreateUserAsync(UserRegisterDTO user)
         {
             var passwordHasher = new PasswordHasher<IdentityUser>();
-            var userEntity = new User() { Email = user.Email, FirstName = user.Name, NormalizedEmail = user.Email.ToUpper(), PasswordHash = user.Password.ToUpper(), NormalizedUserName = user.Username.ToUpper(), LastName = user.Surname,   UserName = user.Username };
+            var userEntity = new User() { Email = user.Email, FirstName = user.Name, NormalizedEmail = Utility.NormalizeWord(user.Email), PasswordHash = user.Password, NormalizedUserName = Utility.NormalizeWord(user.Username), LastName = user.Surname,   UserName = user.Username };
 
             userEntity.PasswordHash = passwordHasher.HashPassword(userEntity, user.Password);
 
@@ -41,12 +42,12 @@ namespace WordsAPI.Repository.Repositories
 
         public async Task<User> GetUserByEmailAsync(string email, ODataQueryOptions<User> queryOptions)
         {
-            return await _dbSet.Where(z => z.NormalizedEmail == email.ToUpper()).SingleOrDefaultAsync();
+            return await _dbSet.Where(z => z.NormalizedEmail == Utility.NormalizeWord(email)).SingleOrDefaultAsync();
         }
 
         public async Task<User> GetUserByUserNameAsync(string username, ODataQueryOptions<User> queryOptions)
         {
-            return await _dbSet.Where(z => z.NormalizedUserName == username.ToUpper()).SingleOrDefaultAsync();
+            return await _dbSet.Where(z => z.NormalizedUserName == Utility.NormalizeWord(username)).SingleOrDefaultAsync();
         }
 
 

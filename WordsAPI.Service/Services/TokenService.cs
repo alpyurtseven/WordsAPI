@@ -1,15 +1,9 @@
 ﻿using Microsoft.Extensions.Options;
-using Microsoft.IdentityModel.JsonWebTokens;
 using Microsoft.IdentityModel.Tokens;
 using SharedLibrary.Configuration;
-using System;
-using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
-using System.Linq;
 using System.Security.Claims;
 using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 using WordsAPI.Core.Configuration;
 using WordsAPI.Core.DTOs;
 using WordsAPI.Core.Models;
@@ -19,11 +13,9 @@ namespace WordsAPI.Service.Services
 {
     public class TokenService : ITokenService
     {
-        private readonly IService<User> _userService;
         private readonly CustomTokenOption _tokenOption;
 
-        public TokenService(IService<User> userService, IOptions<CustomTokenOption> options) { 
-            _userService= userService;
+        public TokenService(IOptions<CustomTokenOption> options) { 
             _tokenOption = options.Value;
         }
 
@@ -83,7 +75,19 @@ namespace WordsAPI.Service.Services
                 AccessToken = token,
                 RefreshToken = CreateRefreshToken(),
                 AccessTokenExpiration= accessTokenExpiration,
-                RefreshTokenExpiration = refreshTokenExpiration
+                RefreshTokenExpiration = refreshTokenExpiration,
+                User = new UserDTO()
+                {
+                    Username= user.UserName,
+                    Email = user.Email,
+                    ExperiencePoint = user.ExperiencePoints,
+                    RequiredExperiencePoint = user.RequiredExperiencePoints,
+                    ProfilePicture = user.ProfilePicture,
+                    Surname = user.LastName,
+                    Name = user.FirstName,
+                    Id = user.Id,
+                    Level = user.Level
+                }
             };
 
             return tokenDto;

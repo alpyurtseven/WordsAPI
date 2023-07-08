@@ -21,6 +21,8 @@ using FluentValidation.AspNetCore;
 using WordsAPI.Service.Validatons;
 using WordsAPI.API.Filters;
 using Microsoft.AspNetCore.Mvc;
+using Serilog;
+using WordsAPI.Caching;
 
 static IEdmModel GetEdmModel()
 {
@@ -33,6 +35,14 @@ var builder = WebApplication.CreateBuilder(args);
 var modelBuilder = new ODataConventionModelBuilder();
 
 // Add services to the container.
+var logger = new LoggerConfiguration()
+.ReadFrom.Configuration(builder.Configuration)
+.Enrich.FromLogContext()
+.CreateLogger();
+
+builder.Logging.ClearProviders();
+builder.Logging.AddSerilog(logger);
+
 builder.Services.AddControllers(options =>
     {
         options.Filters.Add(new ValidateFilterAttribute());
@@ -43,6 +53,7 @@ builder.Services.AddControllers(options =>
             model: modelBuilder.GetEdmModel()))
     .AddFluentValidation(validations =>
         {
+
             validations.RegisterValidatorsFromAssemblyContaining<ClientLoginDtoValidator>();
             validations.RegisterValidatorsFromAssemblyContaining<LoginDtoValidator>();
             validations.RegisterValidatorsFromAssemblyContaining<RefreshTokenDtoValidator>();
@@ -67,6 +78,7 @@ builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepositor
 builder.Services.AddScoped(typeof(IService<>), typeof(Service<>));
 builder.Services.AddScoped(typeof(IWordRepository<>), typeof(WordRepository<>));
 builder.Services.AddScoped(typeof(IWordService<>), typeof(WordService<>));
+builder.Services.AddScoped(typeof(IWordService<>), typeof(WordServiceWithCaching<>));
 builder.Services.AddScoped(typeof(IUserRepository), typeof(UserRepository));
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
@@ -77,6 +89,7 @@ builder.Services.AddCors(p => p.AddPolicy("corsapp", builder =>
 {
     builder.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();
 }));
+builder.Services.AddMemoryCache();
 
 string connectionString = builder.Configuration.GetConnectionString("SqlConnection");
 
@@ -136,14 +149,14 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-var logFilePath = Path.Combine(Environment.CurrentDirectory, "istek_logu.txt");
+//var logFilePath = Path.Combine(Environment.CurrentDirectory, "istek_logu.txt");
 
-// RequestLoggingMiddleware'i uygulay�n
-app.Use(async (context, next) =>
-{
-    var middleware = new RequestLoggingMiddleware(next, logFilePath);
-    await middleware.InvokeAsync(context);
-});
+//// RequestLoggingMiddleware'i uygulay�n
+//app.Use(async (context, next) =>
+//{
+//    var middleware = new RequestLoggingMiddleware(next, logFilePath);
+//    await middleware.InvokeAsync(context);
+//});
 
 app.UseCustomException();
 

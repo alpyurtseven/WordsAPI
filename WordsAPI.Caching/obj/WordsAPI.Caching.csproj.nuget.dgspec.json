@@ -1,0 +1,345 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/alperenyurtseven/Documents/Projects/WordsAPI/WordsAPI.Caching/WordsAPI.Caching.csproj": {}
+  },
+  "projects": {
+    "/Users/alperenyurtseven/Documents/Projects/WordsAPI/SharedLibrary/SharedLibrary.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/alperenyurtseven/Documents/Projects/WordsAPI/SharedLibrary/SharedLibrary.csproj",
+        "projectName": "SharedLibrary",
+        "projectPath": "/Users/alperenyurtseven/Documents/Projects/WordsAPI/SharedLibrary/SharedLibrary.csproj",
+        "packagesPath": "/Users/alperenyurtseven/.nuget/packages/",
+        "outputPath": "/Users/alperenyurtseven/Documents/Projects/WordsAPI/SharedLibrary/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/alperenyurtseven/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.305/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/alperenyurtseven/Documents/Projects/WordsAPI/WordsAPI.Caching/WordsAPI.Caching.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/alperenyurtseven/Documents/Projects/WordsAPI/WordsAPI.Caching/WordsAPI.Caching.csproj",
+        "projectName": "WordsAPI.Caching",
+        "projectPath": "/Users/alperenyurtseven/Documents/Projects/WordsAPI/WordsAPI.Caching/WordsAPI.Caching.csproj",
+        "packagesPath": "/Users/alperenyurtseven/.nuget/packages/",
+        "outputPath": "/Users/alperenyurtseven/Documents/Projects/WordsAPI/WordsAPI.Caching/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/alperenyurtseven/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/alperenyurtseven/Documents/Projects/WordsAPI/WordsAPI.Service/WordsAPI.Service.csproj": {
+                "projectPath": "/Users/alperenyurtseven/Documents/Projects/WordsAPI/WordsAPI.Service/WordsAPI.Service.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.305/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/alperenyurtseven/Documents/Projects/WordsAPI/WordsAPI.Core/WordsAPI.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/alperenyurtseven/Documents/Projects/WordsAPI/WordsAPI.Core/WordsAPI.Core.csproj",
+        "projectName": "WordsAPI.Core",
+        "projectPath": "/Users/alperenyurtseven/Documents/Projects/WordsAPI/WordsAPI.Core/WordsAPI.Core.csproj",
+        "packagesPath": "/Users/alperenyurtseven/.nuget/packages/",
+        "outputPath": "/Users/alperenyurtseven/Documents/Projects/WordsAPI/WordsAPI.Core/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/alperenyurtseven/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/alperenyurtseven/Documents/Projects/WordsAPI/SharedLibrary/SharedLibrary.csproj": {
+                "projectPath": "/Users/alperenyurtseven/Documents/Projects/WordsAPI/SharedLibrary/SharedLibrary.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.16, )"
+            },
+            "Microsoft.AspNetCore.OData": {
+              "target": "Package",
+              "version": "[8.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.305/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/alperenyurtseven/Documents/Projects/WordsAPI/WordsAPI.Repository/WordsAPI.Repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/alperenyurtseven/Documents/Projects/WordsAPI/WordsAPI.Repository/WordsAPI.Repository.csproj",
+        "projectName": "WordsAPI.Repository",
+        "projectPath": "/Users/alperenyurtseven/Documents/Projects/WordsAPI/WordsAPI.Repository/WordsAPI.Repository.csproj",
+        "packagesPath": "/Users/alperenyurtseven/.nuget/packages/",
+        "outputPath": "/Users/alperenyurtseven/Documents/Projects/WordsAPI/WordsAPI.Repository/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/alperenyurtseven/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/alperenyurtseven/Documents/Projects/WordsAPI/SharedLibrary/SharedLibrary.csproj": {
+                "projectPath": "/Users/alperenyurtseven/Documents/Projects/WordsAPI/SharedLibrary/SharedLibrary.csproj"
+              },
+              "/Users/alperenyurtseven/Documents/Projects/WordsAPI/WordsAPI.Core/WordsAPI.Core.csproj": {
+                "projectPath": "/Users/alperenyurtseven/Documents/Projects/WordsAPI/WordsAPI.Core/WordsAPI.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.16, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.305/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/alperenyurtseven/Documents/Projects/WordsAPI/WordsAPI.Service/WordsAPI.Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/alperenyurtseven/Documents/Projects/WordsAPI/WordsAPI.Service/WordsAPI.Service.csproj",
+        "projectName": "WordsAPI.Service",
+        "projectPath": "/Users/alperenyurtseven/Documents/Projects/WordsAPI/WordsAPI.Service/WordsAPI.Service.csproj",
+        "packagesPath": "/Users/alperenyurtseven/.nuget/packages/",
+        "outputPath": "/Users/alperenyurtseven/Documents/Projects/WordsAPI/WordsAPI.Service/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/alperenyurtseven/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/alperenyurtseven/Documents/Projects/WordsAPI/SharedLibrary/SharedLibrary.csproj": {
+                "projectPath": "/Users/alperenyurtseven/Documents/Projects/WordsAPI/SharedLibrary/SharedLibrary.csproj"
+              },
+              "/Users/alperenyurtseven/Documents/Projects/WordsAPI/WordsAPI.Repository/WordsAPI.Repository.csproj": {
+                "projectPath": "/Users/alperenyurtseven/Documents/Projects/WordsAPI/WordsAPI.Repository/WordsAPI.Repository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.3.0, )"
+            },
+            "Microsoft.AspNetCore.OData": {
+              "target": "Package",
+              "version": "[8.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.305/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
